@@ -2,6 +2,7 @@ const glob = require('glob');
 
 const path =  require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin')
 const rspack  = require('@rspack/core')
 
 const pugPages = glob.sync('src/views/pages/*.pug')
