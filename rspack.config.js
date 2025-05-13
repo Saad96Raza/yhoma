@@ -2,7 +2,6 @@ const glob = require('glob');
 
 const path =  require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const copyWebpackPlugin = require('copy-webpack-plugin')
 const rspack  = require('@rspack/core')
 
 const pugPages = glob.sync('src/views/pages/*.pug')
@@ -56,10 +55,11 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
-                type:"asset/resource",
-                generator:{
-                    filename: "media/[name][ext]",
-                }
+                exclude: /src\/styles/, 
+                type: 'asset/resource',
+                generator: {
+                    filename: 'media/[name][ext]', 
+                },
                   
             },
             {
@@ -75,6 +75,13 @@ module.exports = {
 
         new rspack.CssExtractRspackPlugin({
             filename: "css/[name].css", 
+        }),
+
+        
+        new rspack.CopyRspackPlugin({
+            patterns: [
+                { from: 'src/media', to: 'media' }, 
+            ],
         }),
 
         ...pugPages.map((file) => {

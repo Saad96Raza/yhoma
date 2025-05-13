@@ -1,3 +1,7 @@
+@use "sass:math";
+
+
+
 // ================================== //
 // Access nested variable maps values //
 // ================================== //
@@ -21,4 +25,28 @@
 	}
 
 	@return $string;
+}
+
+// ================================== //
+// Convert pixel values to rem units  //
+// ================================== //
+@function rem($pixels, $context: 16) {
+  @return math.div($pixels, $context) * 1rem;
+}
+  // ================================== //
+  // Convert hex color to RGBA with opacity //
+  // ================================== //
+  $opacityMax: 1; // Default opacity
+@function color($color, $opacity: $opacityMax) {
+    @return rgba($color, $opacity);
+}
+  
+  // ================================== //
+  // Set font size with optional line height //
+  // ================================== //
+@mixin font-size-line-height($font-size, $line-height: null) {
+    font-size: rem($font-size);
+    @if $line-height {
+      line-height: rem($line-height);
+    }
 }
