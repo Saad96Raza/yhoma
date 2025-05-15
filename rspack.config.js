@@ -46,8 +46,7 @@ module.exports = {
                     "css-loader",
                     "postcss-loader",              
                     "sass-loader",
-                  ],
-
+                ],
             },           
             {
                 test: /\.pug$/,
@@ -59,8 +58,7 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: 'media/[name][ext]', 
-                },
-                  
+                },                  
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -80,7 +78,7 @@ module.exports = {
         
         new rspack.CopyRspackPlugin({
             patterns: [
-                 { from: 'src/media', to: 'media'},
+                { from: 'src/media', to: 'media'},
             ],
         }),
 
@@ -93,7 +91,7 @@ module.exports = {
               filename: (pageName === 'home') ? 'index.html' : pageName + '.html',
               inject: 'body',
               chunks: ['main'],
-            });
+            })
             
         }),
 

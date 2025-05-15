@@ -498,22 +498,21 @@ select {
 }
 
 /* Breadcrumbs */ /* Buttons */ /* Cards */ /* carousel */
-.barba-leave-active,
-.barba-enter-active {
-  transition: opacity 0.5s ease;
-}
-
-.barba-leave,
-.barba-enter-to {
-  opacity: 1;
-}
-
-.barba-enter,
-.barba-leave-to {
+.barba-once {
   opacity: 0;
 }
 
-/* Forms */ /* Custom checkboxes */ /* Custom radio button */ /* Custom select input */ /* Tables */ /* Header */ /* Navigation */ /* Sidebar */ /* Footer */
+.barba-once-active {
+  transition: opacity 2s linear;
+}
+
+.barba-once-to {
+  opacity: 1;
+}
+
+/* Forms */ /* Custom checkboxes */ /* Custom radio button */ /* Custom select input */ /* Tables */ /* Header */ /* Navigation */ /* Sidebar */ /* Footer */ /* ======== */
+/* Home CSS */
+/* ======== */
 /* ======== */
 /* Main CSS */
 /* ======== */
