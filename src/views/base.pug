@@ -4,8 +4,9 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title #{htmlWebpackPlugin.options.title}
-body
+body(data-barba="wrapper")
   include  ../../src/views/partials/header.pug
-  block content
+  main(data-barba="container")
+    block content
   include  ../../src/views/partials/footer.pug
 

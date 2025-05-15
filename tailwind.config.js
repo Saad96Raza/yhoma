@@ -3,7 +3,7 @@ import   fluid ,{ screens, fontSize } from 'fluid-tailwind'
 import daisyui from 'daisyui'
 
 module.exports = {
-  content: ["./src/**/*.{html,js,pug,scss}"],
+  content: ["./src/**/*.{html,js,pug}"],
   theme: {
     screens,
     fontSize,

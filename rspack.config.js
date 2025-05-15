@@ -80,7 +80,7 @@ module.exports = {
         
         new rspack.CopyRspackPlugin({
             patterns: [
-                { from: 'src/media', to: 'media' }, 
+                 { from: 'src/media', to: 'media'},
             ],
         }),
 
