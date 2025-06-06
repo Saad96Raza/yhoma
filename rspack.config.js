@@ -3,6 +3,7 @@ const glob = require('glob');
 const path =  require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rspack  = require('@rspack/core')
+const { ProvidePlugin } = require('@rspack/core');
 
 const pugPages = glob.sync('src/views/pages/*.pug')
 
@@ -15,7 +16,6 @@ module.exports = {
         filename:'js/[name].bundle.js',
         clean: true,
     },
-
     devServer:{
         static: {
             directory: path.join(__dirname, 'dist'),            
@@ -80,6 +80,11 @@ module.exports = {
             patterns: [
                 { from: 'src/media', to: 'media'},
             ],
+        }),
+        new ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery', 
         }),
 
         ...pugPages.map((file) => {

@@ -2,7 +2,9 @@ import Home from './home';
 
 import barba from '@barba/core';
 import barbaCss from '@barba/css';
-import _ from '../scss/main.scss'
+
+import _ from '../scss/main.scss';
+
 
 
 class App{

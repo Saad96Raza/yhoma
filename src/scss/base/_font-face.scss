@@ -23,3 +23,5 @@
 @include font-face($font-name, "../fonts/Raleway-Extrabold-800", 800, "normal", woff2 woff ttf);
 /* Blackbold */
 @include font-face($font-name, "../fonts/Raleway-Black-900", 900, "normal", woff2 woff ttf);
+
+@include font-face('Krona One', "../fonts/KronaOne-Regular", 900, "normal", ttf);
