@@ -1,19 +1,4 @@
-#onlyfans_wrapper .clean_arrows.tparrows {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0)
-}
+// Abstracts
+@use '../abstracts/' as *;
 
-#onlyfans_wrapper .clean_arrows.tparrows:before {
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 30px;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s
-}
-
-#onlyfans_wrapper .clean_arrows.tparrows.rs-touchhover:before {
-    transform: scale(1.1)
-}
+/* Custom Slider */
