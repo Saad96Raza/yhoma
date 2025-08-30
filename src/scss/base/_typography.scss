@@ -50,13 +50,21 @@
 
 
 
-.link {
-  @apply text-[]; 
+.link-font{
+  @apply 
+  text-[1.6rem]
+  no-underline
+  capitalize;
+   
+}
+.link-font:hover{
+     @apply no-underline;
 }
 
 .xl-font,
 .lg-font {
-    @apply text-[]; 
+    @apply text-[6rem]
+    leading-[1.2]; 
 }
 
 .md-font{
@@ -68,7 +76,10 @@
 }
 
 .body-font {
-    @apply text-[];  
+    @apply text-[2rem]
+    leading-none
+    font-extralight
+    capitalize;  
 }
 
 .highlight-font,
@@ -76,7 +87,7 @@
    @apply text-[]; 
 }
 
-
 .direction {
    @apply text-[]; 
 }
+

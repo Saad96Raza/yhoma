@@ -203,3 +203,22 @@
         @content;
     }
 }
+
+
+@mixin primary-button($px: 50, $py: 20) {
+  background: transparent;
+  width: auto;
+  height: auto;
+  padding: #{$py}px #{$px}px;
+  position: relative;
+  color: ss-var($colors, neutral, "black");
+  text-decoration: none;
+  transition: all ease 0.3s;
+  border: rem(3) solid ss-var($colors, neutral, "black");
+
+  &:hover {
+    background: ss-var($colors, neutral, "black");
+    color: ss-var($colors, neutral, "white");
+    transition: all ease 0.3s;
+  }
+}

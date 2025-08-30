@@ -9,6 +9,10 @@ module.exports = {
     fontSize,
     container: {
       center: true,
+      screens: {
+        DEFAULT: '100%', 
+        xl: '1440px',    
+      },
     },
     extend: {
       fontSize: {        

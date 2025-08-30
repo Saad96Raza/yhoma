@@ -4,3 +4,11 @@
 /* ======== */
 /* Home CSS */
 /* ======== */
+
+
+section{
+    &.home-section-1{
+        background: ss-var($colors,primary,'primary2');
+        
+    }
+}

@@ -1,1 +1,21 @@
-section
+include ../../mixins/primary-button.pug
+
+
+section(class="section home-section-1")
+    div(class="container relative")
+     div(class="grid grid-cols-1 md:grid-cols-[40%_auto] gap-[10rem]")
+        div(class="flex justify-center items-center  relative")
+            img(src="./media/banner/4.jpg" class="object-fill p-[5rem] " alt="")
+        div(class="flex justify-end")
+            img(src="./media/banner/6.jpg" class="object-fill " alt="") 
+        div(class="cards top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-[2rem]")    
+            h1(class="lg-font text-center") Relax. <br> Savour. <br>  Enjoy.
+            p(class="body-font text-center")
+             |Fully self-contained accommodation - the ideal home away from home for couples and families.
+
+            +primaryButton("book now")
+ 
+
+ 
+
+

@@ -6,7 +6,7 @@ $prefix: "ss-";
 // ========= //
 // Font name //
 // ========= //
-$font-name: "Raleway";
+$font-raleway: "Raleway";
 $font-serif: "sans-serif";
 $font-icon: 'iconmoon';
 $font-playfair: 'playfair';
@@ -35,8 +35,8 @@ $colors: (
     // Main colors
     primary:
         (
-            "green": #008f70,
-            "blue": #2b777d,
+            "primary1": #F5EBE0,
+            "primary2": #FAF5F0,
         ),
     // Secondary colors
     secondary:
@@ -53,7 +53,7 @@ $colors: (
     // Grayscale/Basic colors
     neutral:
         (
-            "black": #000000,
+            "black": #393939,
             "darkgray": #343434,
             "gray": #837f7f,
             "lightgray": #f7f7f7,

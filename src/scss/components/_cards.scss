@@ -2,3 +2,19 @@
 @use '../abstracts/' as *;
 
 /* Cards */
+
+.cards{
+    .lg-font{
+        font-family: $font-Mclassic;
+    }
+    position: absolute;
+    background: ss-var($colors , neutral ,'white');
+    width: rem(760);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(160) rem(120);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}

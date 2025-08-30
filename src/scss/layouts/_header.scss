@@ -2,3 +2,7 @@
 @use '../abstracts' as *;
 
 /* Header */
+
+.annoucment-header{
+    background: ss-var($colors,primary,'primary1');
+}

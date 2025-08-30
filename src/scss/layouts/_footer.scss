@@ -2,3 +2,8 @@
 @use '../abstracts' as *;
 
 /* Footer */
+
+footer{
+    background: ss-var($colors,primary,'primary1');
+
+}

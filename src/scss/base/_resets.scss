@@ -8,7 +8,7 @@
 html {
     box-sizing: border-box;
     /* Font family */
-    font-family: $font-name, $font-serif;
+    font-family: $font-raleway, $font-serif;
     /* To make rem units easier to work with (1rem = 10px) */
     font-size: 62.5%;
     /* Scrollbar Styling : Firefox */
@@ -63,6 +63,7 @@ body {
     min-height: 100vh;
     // text-rendering: optimizeSpeed;
     // line-height: 1.5;
+    font-family: $font-playfair;
 }
 
 img,
@@ -76,4 +77,37 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+
+
+section,
+header,
+footer{
+    .container{
+        @apply px-[1rem] md:px-[13.125rem];
+    }
+}
+
+p,
+span{
+    font-family: $font-raleway;
+}
+
+a{
+
+   &.underline-text{
+        position: relative; 
+     &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: rem(2);
+        bottom: rem(-5);
+        background: ss-var($colors,neutral,'black');
+     }
+     &:hover{
+        text-decoration: none;
+     }
+   }
 }
