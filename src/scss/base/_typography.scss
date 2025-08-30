@@ -45,3 +45,38 @@
 @include breakpoint-min(ss-var($breakpoints, "2560")) {
     @include font-sizes(4.8rem, 3.8rem, 3rem, 2rem, 1.8rem);
 }
+
+
+
+
+
+.link {
+  @apply text-[]; 
+}
+
+.xl-font,
+.lg-font {
+    @apply text-[]; 
+}
+
+.md-font{
+    @apply text-[]; 
+}
+
+.sm-font {
+    @apply text-[]; 
+}
+
+.body-font {
+    @apply text-[];  
+}
+
+.highlight-font,
+.field-font {
+   @apply text-[]; 
+}
+
+
+.direction {
+   @apply text-[]; 
+}
