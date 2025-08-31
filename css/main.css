@@ -317,7 +317,7 @@ li {
 @media (min-width: 48rem) {
   .xl-font,
 .lg-font {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 
@@ -923,9 +923,9 @@ a.underline-text:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  padding: 7.5rem 6.25rem;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  padding: 7.5rem 3.75rem;
 }
 .cards .lg-font {
   font-family: "Mclassic";
