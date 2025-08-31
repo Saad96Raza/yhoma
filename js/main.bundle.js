@@ -23551,6 +23551,8 @@ var App = /*#__PURE__*/ function() {
             home: new _home__WEBPACK_IMPORTED_MODULE_0__["default"]()
         };
         this.createAjaxNavigation();
+        this.createNavbar();
+        this.addEventListeners();
     }
     _create_class(App, [
         {
@@ -23568,6 +23570,21 @@ var App = /*#__PURE__*/ function() {
                             }
                         }
                     ]
+                });
+            }
+        },
+        {
+            key: "createNavbar",
+            value: function createNavbar() {
+                this.menuToggle = document.querySelector('.menu-toggle');
+            }
+        },
+        {
+            key: "addEventListeners",
+            value: function addEventListeners() {
+                var _this = this;
+                this.menuToggle.addEventListener('click', function() {
+                    _this.menuToggle.classList.toggle("active");
                 });
             }
         }
