@@ -335,7 +335,10 @@ li {
 }
 
 .md-font {
-  color: ;
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: "Mclassic";
 }
 
 .sm-font {
@@ -365,6 +368,10 @@ li {
   .body-font {
     font-size: 2rem;
   }
+}
+
+.body-font {
+  font-family: "Raleway";
 }
 
 .highlight-font,
@@ -1071,6 +1078,33 @@ section.home-section-1 .shape-divider path {
   fill-opacity: 1;
   fill: #ffffff;
 }
+section.home-section-3 {
+  background: url(../media/bg-1.jpg) no-repeat center/cover;
+}
+section.home-section-4 .content {
+  background: #FAF5F0;
+}
+section.home-section-5 {
+  position: relative;
+  background: url(../media/bg-3.jpg) no-repeat center/cover;
+}
+section.home-section-5::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+section.home-section-6 {
+  background: #FAF5F0;
+  position: relative;
+}
+section.home-section-6 .content {
+  background: url(../media/bg-3.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  padding: 23.75rem 0;
+}
+
 /* ======== */
 /* Main CSS */
 /* ======== */
@@ -3077,6 +3111,9 @@ video {
 .h-1 {
   height: 0.25rem;
 }
+.h-full {
+  height: 100%;
+}
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -3090,6 +3127,9 @@ video {
 .max-w-\[4ch\] {
   max-width: 4ch;
 }
+.max-w-\[5ch\] {
+  max-width: 5ch;
+}
 .max-w-\[70ch\] {
   max-width: 70ch;
 }
@@ -3098,6 +3138,9 @@ video {
 }
 .resize {
   resize: both;
+}
+.list-disc {
+  list-style-type: disc;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -3129,11 +3172,17 @@ video {
 .gap-\[5rem\] {
   gap: 5rem;
 }
+.gap-\[6rem\] {
+  gap: 6rem;
+}
 .border {
   border-width: 1px;
 }
 .p-0 {
   padding: 0px;
+}
+.p-\[2rem\] {
+  padding: 2rem;
 }
 .py-\[10rem\] {
   padding-top: 10rem;
@@ -3142,6 +3191,10 @@ video {
 .py-\[2rem\] {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-\[5rem\] {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .py-\[6\.125rem\] {
   padding-top: 6.125rem;
@@ -3264,11 +3317,17 @@ video {
   .md\:hidden {
     display: none;
   }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .md\:grid-cols-\[40\%_auto\] {
     grid-template-columns: 40% auto;
   }
   .md\:gap-\[5rem\] {
     gap: 5rem;
+  }
+  .md\:p-\[13\.125rem\] {
+    padding: 13.125rem;
   }
   .md\:p-\[5rem\] {
     padding: 5rem;
