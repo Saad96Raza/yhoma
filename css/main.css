@@ -978,12 +978,11 @@ a.underline-text:hover {
   opacity: 1;
 }
 
-/* Custom Slider */ /* Forms */
+/* Custom Slider */ /* Forms */ /* Navigation */
 .navigation {
   display: table-cell;
   vertical-align: middle;
   height: 100%;
-  margin: 0 auto;
   /* Shared styles for prev/next */
   /* Prev arrow */
   /* Next arrow */
@@ -992,7 +991,6 @@ a.underline-text:hover {
 .navigation .next {
   font-size: 3em;
   display: inline-block;
-  text-indent: -9999px; /* hide text, keep accessibility */
   width: 5em;
   height: 5em;
   position: relative;
@@ -1006,7 +1004,7 @@ a.underline-text:hover {
   left: 25%;
   right: 25%;
   top: 50%;
-  height: 1px;
+  height: 0.0625rem;
   background-color: #cd5c4d; /* red */
   transition: background-color 0.2s ease-out;
 }
@@ -1110,6 +1108,29 @@ a.underline-text:hover {
 }
 .menu-toggle.active .cross span:last-child {
   transform: translateY(-50%) rotate(-45deg) scaleX(1);
+}
+
+/* Icons */
+section.home-section-7 .swiper .swiper-pagination {
+  position: relative;
+}
+section.home-section-7 .swiper .swiper-pagination .swiper-pagination-bullet {
+  background: transparent;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  border: 0.1875rem solid #393939;
+  opacity: 1;
+  margin: 0 1.25rem;
+  border-radius: 50%;
+}
+section.home-section-7 .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #393939;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+section.home-section-7 .swiper .swiper-button-prev, section.home-section-7 .swiper .swiper-button-next {
+  top: 0;
+  width: auto;
 }
 
 /* Custom radio button */ /* Custom select input */ /* Tables */ /* Header */
@@ -2136,6 +2157,18 @@ video {
 .z-10 {
   z-index: 10;
 }
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+.order-4 {
+  order: 4;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -2175,8 +2208,8 @@ video {
 .max-w-\[30ch\] {
   max-width: 30ch;
 }
-.max-w-\[60ch\] {
-  max-width: 60ch;
+.max-w-\[55ch\] {
+  max-width: 55ch;
 }
 .max-w-\[70ch\] {
   max-width: 70ch;
@@ -2247,6 +2280,12 @@ video {
 /* ======== */
 @plugin "daisyui";
 @media (min-width: 48rem) {
+  .md\:order-1 {
+    order: 1;
+  }
+  .md\:order-2 {
+    order: 2;
+  }
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
   }
