@@ -1080,6 +1080,17 @@ section.home-section-1 .shape-divider path {
 }
 section.home-section-3 {
   background: url(../media/bg-1.jpg) no-repeat center/cover;
+  position: relative;
+}
+section.home-section-3 h2 {
+  color: #ffffff;
+}
+section.home-section-3 svg {
+  position: absolute;
+  bottom: 0;
+}
+section.home-section-3 svg path {
+  fill: #ffffff;
 }
 section.home-section-4 .content {
   background: #FAF5F0;
@@ -1102,7 +1113,6 @@ section.home-section-6 {
 section.home-section-6 .content {
   background: url(../media/bg-3.jpg) no-repeat center/cover;
   background-attachment: fixed;
-  padding: 23.75rem 0;
 }
 
 /* ======== */
@@ -3087,6 +3097,10 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .ml-auto {
   margin-left: auto;
 }
@@ -3113,6 +3127,9 @@ video {
 }
 .h-full {
   height: 100%;
+}
+.h-screen {
+  height: 100vh;
 }
 .w-fit {
   width: -moz-fit-content;
