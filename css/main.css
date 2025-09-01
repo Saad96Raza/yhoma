@@ -1082,8 +1082,10 @@ section.home-section-3 {
   background: url(../media/bg-1.jpg) no-repeat center/cover;
   position: relative;
 }
-section.home-section-3 h2 {
+section.home-section-3 .lg-font {
   color: #ffffff;
+  mix-blend-mode: difference;
+  font-size: 8rem;
 }
 section.home-section-3 svg {
   position: absolute;
@@ -3140,12 +3142,6 @@ video {
 }
 .max-w-\[30ch\] {
   max-width: 30ch;
-}
-.max-w-\[4ch\] {
-  max-width: 4ch;
-}
-.max-w-\[5ch\] {
-  max-width: 5ch;
 }
 .max-w-\[70ch\] {
   max-width: 70ch;
