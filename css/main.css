@@ -1543,6 +1543,7 @@ a.underline-text:hover {
   text-decoration: none;
   transition: all ease 0.3s;
   border: 0.1875rem solid #393939;
+  display: flex;
 }
 .primary-button:hover {
   background: #393939;
@@ -1561,6 +1562,7 @@ a.underline-text:hover {
   text-decoration: none;
   transition: all ease 0.3s;
   border: 0.1875rem solid #393939;
+  display: flex;
 }
 .card-button:hover {
   background: #393939;
@@ -1886,6 +1888,9 @@ section.contact-section-1 {
 }
 section.contact-section-2 {
   background: #efeae0;
+}
+section.contact-section-3 .grid .body-font {
+  color: #ffffff;
 }
 section.contact-section-3 .grid .left:nth-child(1) {
   background: #7a7164;
@@ -3135,6 +3140,9 @@ video {
 .py-\[6\.125rem\] {
   padding-top: 6.125rem;
   padding-bottom: 6.125rem;
+}
+.pb-\[10rem\] {
+  padding-bottom: 10rem;
 }
 .pt-\[2rem\] {
   padding-top: 2rem;
