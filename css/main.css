@@ -1689,14 +1689,14 @@ a.underline-text:hover {
   left: 25%;
   right: 25%;
   top: 50%;
-  height: 0.0625rem;
-  background-color: #cd5c4d; /* red */
+  height: 0.125rem;
+  background-color: #7a7164;
   transition: background-color 0.2s ease-out;
 }
 .navigation .prev:hover::before, .navigation .prev:hover::after,
 .navigation .next:hover::before,
 .navigation .next:hover::after {
-  background-color: #292b30; /* dark grey */
+  background-color: #efeae0;
 }
 .navigation .prev::before {
   transform-origin: 0 100%;
@@ -1796,10 +1796,10 @@ a.underline-text:hover {
 }
 
 /* Icons */
-section.home-section-7 .swiper .swiper-pagination {
+section.section .swiper .swiper-pagination {
   position: relative;
 }
-section.home-section-7 .swiper .swiper-pagination .swiper-pagination-bullet {
+section.section .swiper .swiper-pagination .swiper-pagination-bullet {
   background: transparent;
   width: 1.0625rem;
   height: 1.0625rem;
@@ -1808,16 +1808,16 @@ section.home-section-7 .swiper .swiper-pagination .swiper-pagination-bullet {
   margin: 0 1.25rem;
   border-radius: 50%;
 }
-section.home-section-7 .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+section.section .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #393939;
   width: 0.9375rem;
   height: 0.9375rem;
 }
-section.home-section-7 .swiper .swiper-button-prev, section.home-section-7 .swiper .swiper-button-next {
+section.section .swiper .swiper-button-prev, section.section .swiper .swiper-button-next {
   top: 0;
   width: auto;
 }
-section.home-section-7 .swiper .swiper-button-prev::after, section.home-section-7 .swiper .swiper-button-next::after {
+section.section .swiper .swiper-button-prev::after, section.section .swiper .swiper-button-next::after {
   display: none;
 }
 
