@@ -6349,7 +6349,7 @@ var Home = /*#__PURE__*/ function() {
         {
             key: "createTesmonial",
             value: function createTesmonial() {
-                new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
+                this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
                     modules: [
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation,
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination,
@@ -6373,8 +6373,8 @@ var Home = /*#__PURE__*/ function() {
                     },
                     navigation: {
                         enabled: false,
-                        nextEl: '.navigation .next',
-                        prevEl: '.navigation .prev'
+                        nextEl: '.navigation.next',
+                        prevEl: '.navigation.prev'
                     },
                     scrollbar: {
                         el: '.swiper-scrollbar'
@@ -6387,6 +6387,7 @@ var Home = /*#__PURE__*/ function() {
                         }
                     }
                 });
+                this.swiper.navigation.update();
             }
         }
     ]);
