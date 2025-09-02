@@ -1619,7 +1619,7 @@ a.underline-text:hover {
 .input-field input {
   width: 100%;
   height: 100%;
-  color: #ffffff;
+  color: #c8c8c8;
   padding-top: 1.25rem;
   border: none;
 }
@@ -1628,7 +1628,7 @@ a.underline-text:hover {
 }
 .input-field input:focus + .label-name .content-name, .input-field input:valid + .label-name .content-name {
   transform: translateY(-100%);
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   left: 0;
   color: #393939;
 }
@@ -1795,6 +1795,79 @@ a.underline-text:hover {
   transform: translateY(-50%) rotate(-45deg) scaleX(1);
 }
 
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-smooth body {
+  overflow: hidden;
+}
+html.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+[data-scroll-direction=horizontal] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+.c-scrollbar .c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar .c-scrollbar_thumb {
+  cursor: grabbing;
+}
+
 /* Icons */
 section.section .swiper .swiper-pagination {
   position: relative;
@@ -1889,7 +1962,7 @@ section.contact-section-1 {
 section.contact-section-2 {
   background: #efeae0;
 }
-section.contact-section-3 .grid .body-font {
+section.contact-section-3 .grid .left .body-font {
   color: #ffffff;
 }
 section.contact-section-3 .grid .left:nth-child(1) {
