@@ -994,6 +994,7 @@ li {
 .highlight-font,
 .field-font {
   color: ;
+  color: #ffffff;
 }
 
 .direction {
@@ -1058,7 +1059,6 @@ ol {
 
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "playfair";
 }
@@ -1106,7 +1106,7 @@ a.underline-text::before {
   width: 100%;
   height: 0.125rem;
   bottom: 0;
-  background: #393939;
+  background: #ffffff;
 }
 a.underline-text:hover {
   text-decoration: none;
@@ -1548,6 +1548,7 @@ a.underline-text:hover {
   background: #393939;
   color: #ffffff;
   transition: all ease 0.3s;
+  text-decoration: none;
 }
 
 .card-button {
@@ -1565,10 +1566,11 @@ a.underline-text:hover {
   background: #393939;
   color: #ffffff;
   transition: all ease 0.3s;
+  text-decoration: none;
 }
 
 /* Cards */
-.cards {
+.package-card {
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -1578,8 +1580,29 @@ a.underline-text:hover {
   border-top-right-radius: 45%;
   padding: 7.5rem 3.75rem;
 }
-.cards .lg-font {
+.package-card .lg-font {
   font-family: "Mclassic";
+}
+
+.offer-card {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .offer-card {
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+  }
 }
 
 /* carousel */ /* Custom Slider */ /* Forms */
@@ -1792,22 +1815,25 @@ section.home-section-7 .swiper .swiper-button-prev, section.home-section-7 .swip
   top: 0;
   width: auto;
 }
+section.home-section-7 .swiper .swiper-button-prev::after, section.home-section-7 .swiper .swiper-button-next::after {
+  display: none;
+}
 
 /* Custom radio button */ /* Custom select input */ /* Tables */ /* Header */
 .annoucment-header {
-  background: #F5EBE0;
+  background: #7a7164;
 }
 
 /* Navigation */ /* Sidebar */ /* Footer */
 footer {
-  background: #F5EBE0;
+  background: #7a7164;
 }
 
 /* ======== */
 /* Home CSS */
 /* ======== */
 section.home-section-1 {
-  background: #FAF5F0;
+  background: #efeae0;
 }
 section.home-section-1 .shape-divider path {
   fill-opacity: 1;
@@ -1825,11 +1851,14 @@ section.home-section-3 svg path {
   fill: #ffffff;
 }
 section.home-section-4 .content {
-  background: #FAF5F0;
+  background: #efeae0;
 }
 section.home-section-5 {
   position: relative;
   background: url(../media/bg-3.jpg) no-repeat center/cover;
+}
+section.home-section-5 .xxl-font {
+  color: #393939;
 }
 section.home-section-5::before {
   content: "";
@@ -1839,7 +1868,7 @@ section.home-section-5::before {
   z-index: 2;
 }
 section.home-section-6 {
-  background: #FAF5F0;
+  background: #efeae0;
   position: relative;
 }
 section.home-section-6 .content {
@@ -1856,10 +1885,29 @@ section.contact-section-1 {
   background-attachment: fixed;
 }
 section.contact-section-2 {
-  background: #FAF5F0;
+  background: #efeae0;
 }
 section.contact-section-3 .grid .left:nth-child(1) {
-  background: #F5EBE0;
+  background: #7a7164;
+}
+
+/* ======== */
+/* Home CSS */
+/* ======== */
+section.about-section-3 svg {
+  width: 120rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+section.about-section-3 svg path {
+  fill: #efeae0;
+}
+section.about-section-3 .left {
+  background: #efeae0;
+}
+section.about-section-4 {
+  background: #efeae0;
 }
 
 /* ======== */
@@ -2972,9 +3020,6 @@ video {
 .order-4 {
   order: 4;
 }
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -2998,11 +3043,11 @@ video {
 .hidden {
   display: none;
 }
+.h-\[31\.25rem\] {
+  height: 31.25rem;
+}
 .h-full {
   height: 100%;
-}
-.h-screen {
-  height: 100vh;
 }
 .w-fit {
   width: -moz-fit-content;
@@ -3011,8 +3056,14 @@ video {
 .w-full {
   width: 100%;
 }
+.max-w-\[12ch\] {
+  max-width: 12ch;
+}
 .max-w-\[30ch\] {
   max-width: 30ch;
+}
+.max-w-\[40ch\] {
+  max-width: 40ch;
 }
 .max-w-\[55ch\] {
   max-width: 55ch;
@@ -3073,9 +3124,9 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.py-\[3rem\] {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-\[4rem\] {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .py-\[5rem\] {
   padding-top: 5rem;
@@ -3084,6 +3135,9 @@ video {
 .py-\[6\.125rem\] {
   padding-top: 6.125rem;
   padding-bottom: 6.125rem;
+}
+.pt-\[2rem\] {
+  padding-top: 2rem;
 }
 .text-center {
   text-align: center;
@@ -3095,9 +3149,6 @@ video {
 /* Main DAISYUI DECORATIVES */
 /* ======== */
 @plugin "daisyui";
-.hover\:no-underline:hover {
-  text-decoration-line: none;
-}
 @media (min-width: 48rem) {
   .md\:order-1 {
     order: 1;
@@ -3123,11 +3174,17 @@ video {
   .md\:hidden {
     display: none;
   }
+  .md\:h-screen {
+    height: 100vh;
+  }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .md\:grid-cols-\[40\%_auto\] {
     grid-template-columns: 40% auto;
+  }
+  .md\:gap-\[3rem\] {
+    gap: 3rem;
   }
   .md\:gap-\[5rem\] {
     gap: 5rem;
@@ -3137,5 +3194,12 @@ video {
   }
   .md\:p-\[5rem\] {
     padding: 5rem;
+  }
+  .md\:p-\[6\.125rem\] {
+    padding: 6.125rem;
+  }
+  .md\:py-\[10rem\] {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }

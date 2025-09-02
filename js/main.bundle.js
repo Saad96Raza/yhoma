@@ -6372,11 +6372,19 @@ var Home = /*#__PURE__*/ function() {
                         clickable: true
                     },
                     navigation: {
+                        enabled: false,
                         nextEl: '.navigation .next',
                         prevEl: '.navigation .prev'
                     },
                     scrollbar: {
                         el: '.swiper-scrollbar'
+                    },
+                    breakpoints: {
+                        768: {
+                            navigation: {
+                                enabled: true
+                            }
+                        }
                     }
                 });
             }
