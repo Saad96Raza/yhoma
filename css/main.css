@@ -1903,8 +1903,10 @@ header .pure-toggle-label {
   width: 0;
   height: 0;
 }
-header .pure-toggle-label .pure-drawer {
+
+.offcanvas .pure-drawer {
   z-index: 999;
+  background: #f2eee9;
 }
 
 /* Navigation */ /* Sidebar */ /* Footer */
