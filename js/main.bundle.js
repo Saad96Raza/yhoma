@@ -20466,6 +20466,7 @@ var App = /*#__PURE__*/ function() {
             key: "createNavbar",
             value: function createNavbar() {
                 this.menuToggle = document.querySelector('.menu-toggle');
+                this.toggle = document.getElementById("pure-toggle-left");
             }
         },
         {
@@ -20499,7 +20500,10 @@ var App = /*#__PURE__*/ function() {
             value: function addEventListeners() {
                 var _this = this;
                 this.menuToggle.addEventListener('click', function() {
-                    return _this.menuToggle.classList.toggle("active");
+                    if (_this.menuToggle && _this.toggle) {
+                        _this.menuToggle.classList.toggle("active");
+                        _this.toggle.checked = !_this.toggle.checked;
+                    }
                 });
             }
         }
