@@ -9587,7 +9587,7 @@ var Home = /*#__PURE__*/ function() {
         {
             key: "createTesmonial",
             value: function createTesmonial() {
-                this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
+                this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.testimonial', {
                     modules: [
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation,
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination,
@@ -9606,16 +9606,117 @@ var Home = /*#__PURE__*/ function() {
                         crossFade: true
                     },
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: '.testimonial .swiper-pagination',
                         clickable: true
                     },
                     navigation: {
                         enabled: false,
-                        nextEl: '.navigation .next',
-                        prevEl: '.navigation s.prev'
+                        nextEl: '.testimonial .navigation .next',
+                        prevEl: '.testimonial .navigation .prev'
                     },
                     scrollbar: {
                         el: '.swiper-scrollbar'
+                    },
+                    breakpoints: {
+                        768: {
+                            navigation: {
+                                enabled: true
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    ]);
+    return Home;
+}();
+
+
+
+}),
+"./src/apps/portfolio/index.js": 
+/*!*************************************!*\
+  !*** ./src/apps/portfolio/index.js ***!
+  \*************************************/
+(function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (Portfolio)
+});
+/* ESM import */var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* ESM import */var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* ESM import */var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* ESM import */var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
+/* ESM import */var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
+/* ESM import */var swiper_css_effect_fade__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/effect-fade */ "./node_modules/swiper/modules/effect-fade.css");
+function _class_call_check(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _create_class(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+
+
+
+
+
+
+var Portfolio = /*#__PURE__*/ function() {
+    "use strict";
+    function Portfolio() {
+        _class_call_check(this, Portfolio);
+        this.createReRender();
+    }
+    _create_class(Portfolio, [
+        {
+            key: "createReRender",
+            value: function createReRender() {
+                this.createGallery();
+            }
+        },
+        {
+            key: "createGallery",
+            value: function createGallery() {
+                this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery', {
+                    modules: [
+                        swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation,
+                        swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination,
+                        swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade
+                    ],
+                    direction: 'horizontal',
+                    loop: true,
+                    speed: 1000,
+                    autoplay: {
+                        delay: 2500
+                    },
+                    autoplayDisableOnInteraction: false,
+                    effect: "fade",
+                    slidersPerView: 1,
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    pagination: {
+                        el: '.gallery .swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        enabled: false,
+                        nextEl: '.gallery .navigation .next',
+                        prevEl: '.gallery .navigation .prev'
                     },
                     breakpoints: {
                         768: {
@@ -9629,7 +9730,7 @@ var Home = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return Home;
+    return Portfolio;
 }();
 
 
@@ -20274,11 +20375,12 @@ var __webpack_exports__ = {};
   \***************************/
 __webpack_require__.r(__webpack_exports__);
 /* ESM import */var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/apps/home/index.js");
-/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
-/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_1__);
-/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
-/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
+/* ESM import */var _portfolio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./portfolio */ "./src/apps/portfolio/index.js");
+/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
+/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_2__);
+/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
+/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
 function _class_call_check(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
         throw new TypeError("Cannot call a class as a function");
@@ -20303,12 +20405,14 @@ function _create_class(Constructor, protoProps, staticProps) {
 
 
 
+
 var App = /*#__PURE__*/ function() {
     "use strict";
     function App() {
         _class_call_check(this, App);
         this.pages = {
-            home: new _home__WEBPACK_IMPORTED_MODULE_0__["default"]()
+            home: new _home__WEBPACK_IMPORTED_MODULE_0__["default"](),
+            portfolio: new _portfolio__WEBPACK_IMPORTED_MODULE_1__["default"]()
         };
         this.createLocomotiveScroll();
         this.createAjaxNavigation();
@@ -20321,7 +20425,7 @@ var App = /*#__PURE__*/ function() {
             key: "createAjaxNavigation",
             value: function createAjaxNavigation() {
                 var easeIn = function(container, done) {
-                    return gsap__WEBPACK_IMPORTED_MODULE_4__["default"].to(container, {
+                    return gsap__WEBPACK_IMPORTED_MODULE_5__["default"].to(container, {
                         autoAlpha: 0,
                         duration: 1,
                         ease: 'none',
@@ -20331,13 +20435,13 @@ var App = /*#__PURE__*/ function() {
                     });
                 };
                 var easeOut = function(container) {
-                    return gsap__WEBPACK_IMPORTED_MODULE_4__["default"].from(container, {
+                    return gsap__WEBPACK_IMPORTED_MODULE_5__["default"].from(container, {
                         autoAlpha: 0,
                         duration: 1,
                         ease: 'none'
                     });
                 };
-                _barba_core__WEBPACK_IMPORTED_MODULE_1___default().init({
+                _barba_core__WEBPACK_IMPORTED_MODULE_2___default().init({
                     transitions: [
                         {
                             once: function once(param) {
@@ -20367,7 +20471,7 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createLocomotiveScroll",
             value: function createLocomotiveScroll() {
-                this.locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_2__["default"]({
+                this.locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__["default"]({
                     el: document.querySelector('.smooth-scroll'),
                     smooth: true,
                     reloadOnContextChange: true,
@@ -20380,11 +20484,12 @@ var App = /*#__PURE__*/ function() {
             key: "createReRender",
             value: function createReRender() {
                 var _this = this;
-                _barba_core__WEBPACK_IMPORTED_MODULE_1___default().hooks.before(function() {
+                _barba_core__WEBPACK_IMPORTED_MODULE_2___default().hooks.before(function() {
                     _this.locomotiveScroll.destroy();
                 });
-                _barba_core__WEBPACK_IMPORTED_MODULE_1___default().hooks.after(function() {
+                _barba_core__WEBPACK_IMPORTED_MODULE_2___default().hooks.after(function() {
                     _this.pages.home.createReRender();
+                    _this.pages.portfolio.createReRender();
                     _this.locomotiveScroll.init();
                 });
             }
