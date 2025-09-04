@@ -2042,6 +2042,9 @@ section.home-section-3 svg path {
 section.home-section-4 .content {
   background: #dbdbd9;
 }
+section.home-section-4 svg path {
+  fill: #dbdbd9;
+}
 section.home-section-5 {
   position: relative;
   background: url(../media/bg-3.jpg) no-repeat center/cover;
