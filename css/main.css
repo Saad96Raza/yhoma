@@ -1965,13 +1965,13 @@ section .navigation .next::after {
   right: 25%;
   top: 50%;
   height: 0.125rem;
-  background-color: #82694d;
+  background-color: #756762;
   transition: background-color 0.2s ease-out;
 }
 section .navigation .prev:hover::before, section .navigation .prev:hover::after,
 section .navigation .next:hover::before,
 section .navigation .next:hover::after {
-  background-color: #f2eee9;
+  background-color: #dbdbd9;
 }
 section .navigation .prev::before {
   transform-origin: 0 100%;
@@ -1992,7 +1992,7 @@ section .navigation .next::after {
 
 /* Custom radio button */ /* Custom select input */ /* Tables */ /* Header */
 .annoucment-header {
-  background: #82694d;
+  background: #756762;
 }
 
 header .pure-toggle-label {
@@ -2004,7 +2004,7 @@ header .pure-toggle-label {
 
 .offcanvas .pure-drawer {
   z-index: 999;
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 .offcanvas .pure-drawer li a {
   text-decoration: none;
@@ -2015,14 +2015,14 @@ header .pure-toggle-label {
 
 /* Navigation */ /* Sidebar */ /* Footer */
 footer {
-  background: #82694d;
+  background: #756762;
 }
 
 /* ======== */
 /* Home CSS */
 /* ======== */
 section.home-section-1 {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.home-section-1 .shape-divider path {
   fill-opacity: 1;
@@ -2040,7 +2040,7 @@ section.home-section-3 svg path {
   fill: #ffffff;
 }
 section.home-section-4 .content {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.home-section-5 {
   position: relative;
@@ -2057,7 +2057,7 @@ section.home-section-5::before {
   z-index: 2;
 }
 section.home-section-6 {
-  background: #f2eee9;
+  background: #dbdbd9;
   position: relative;
 }
 
@@ -2070,13 +2070,13 @@ section.contact-section-1 {
   background-attachment: fixed;
 }
 section.contact-section-2 {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.contact-section-3 .grid .left .body-font {
   color: #ffffff;
 }
 section.contact-section-3 .grid .left:nth-child(1) {
-  background: #82694d;
+  background: #756762;
 }
 
 /* ======== */
@@ -2089,43 +2089,43 @@ section.about-section-3 svg {
   bottom: 0;
 }
 section.about-section-3 svg path {
-  fill: #f2eee9;
+  fill: #dbdbd9;
 }
 section.about-section-3 .left {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.about-section-4 {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 
 /* ======== */
 /* PORTFOLIO CSS */
 /* ======== */
 section.portfolio-section-1 {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.portfolio-section-1 .shape-divider path {
   fill-opacity: 1;
   fill: #ffffff;
 }
 section.portfolio-section-2 .left {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.portfolio-section-3 .grid .feature {
   padding: 7.5rem 2.5rem;
 }
 section.portfolio-section-3 .grid .feature:nth-child(odd) {
-  background: #82694d;
+  background: #756762;
 }
 section.portfolio-section-3 .grid .feature:nth-child(even) {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.portfolio-section-3 .grid .feature img {
   width: 6.25rem;
   height: auto;
 }
 section.portfolio-section-4 .content {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.portfolio-section-4 .content .grid .white {
   background: #ffffff;
@@ -2134,7 +2134,7 @@ section.portfolio-section-4 .content svg path {
   fill: #ffffff;
 }
 section.portfolio-section-5 {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 section.portfolio-section-5 svg {
   bottom: 0;
@@ -2149,7 +2149,7 @@ section.portfolio-section-5 .feature img {
   height: auto;
 }
 section.portfolio-section-7 {
-  background: #f2eee9;
+  background: #dbdbd9;
 }
 
 /* ======== */
