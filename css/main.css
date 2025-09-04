@@ -2049,12 +2049,20 @@ section.home-section-5 {
 section.home-section-5 .xxl-font {
   color: #393939;
 }
+section.home-section-5 svg {
+  position: relative;
+  z-index: 2;
+  fill: #dbdbd9;
+}
+section.home-section-5 .container {
+  z-index: 2;
+}
 section.home-section-5::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.9);
-  z-index: 2;
+  z-index: 1;
 }
 section.home-section-6 {
   background: #dbdbd9;
