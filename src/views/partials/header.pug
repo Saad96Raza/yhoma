@@ -1,17 +1,60 @@
-div(class="annoucment-header")
-    p(class="highlight-font mx-auto w-fit py-[2rem] body-font") <a class="body-font underline-text">Book Now</a>  on Airbnb | 20% Winter Special now on!
+include ../../views/pages/mixins/navlink.pug
+
+section(class="annoucment-header")
+    div(class="container")
+        p(class="highlight-font mx-auto w-fit text-center py-[2rem] body-font") <a class="body-font underline-text">Book Now</a>  on Airbnb | 20% Winter Special now on!
+
 header(class="py-[6.125rem]")
     div(class="container")
         div(class="logo")
-        div(class="nav")
-            ul(class="flex gap-[5rem] ml-auto w-fit") 
-                li 
-                    a(href="#" class="link-font") Home
-                li 
-                    a(href="#" class="link-font") Porfolio
-                li 
-                    a(href="#" class="link-font") About
-                li 
-                    a(href="#" class="link-font") Contact
-                li
-                    a(href="#" class="primary-button link-font") get in touch 
+        div(class="nav flex")
+            ul(class="hidden md:flex gap-[5rem] ml-auto w-fit") 
+                li(class="flex")
+                    +LINK(
+                        'home',
+                        'index.html'
+                    )
+                li(class="flex") 
+                    +LINK(
+                        'portfolio',
+                        'portfolio.html'
+                    )
+                li(class="flex") 
+                    +LINK(
+                        'about',
+                        'about.html'
+                    )
+                li(class="flex") 
+                    +LINK(
+                        'contact',
+                        'contact.html'
+                    )
+                li(class="flex")
+                    a(href="#" class="call-to-action link-font") get in touch 
+            div(class="flex justify-end md:hidden w-full") 
+                div(class="menu-toggle relative z-10")
+                        .hamburger
+                            span
+                            span
+                            span
+                        .cross
+                            span
+                            span
+section(class="pure-container offcanvas" data-effect='pure-effect-fade')
+    input(id="pure-toggle-left" class="pure-toggle" type='checkbox' data-toggle='left')
+    div(class="pure-drawer flex" data-position='left')
+        div(class="container flex my-auto")
+            div(class="grid grid-cols-1 w-full h-fit")
+                ul(class="grid grid-cols-1 gap-[3rem]")
+                    li 
+                        a(hef="index.html" class="md-font") home
+                    li 
+                        a(hef="portfolio.html" class="md-font") portfolio
+                    li 
+                        a(hef="about.html" class="md-font") about 
+                    li 
+                        a(hef="contact.html" class="md-font") contact 
+                    li(class="flex ")
+                        a(href="#" class="call-to-action link-font justify-center mx-auto  w-full flex") get in touch               
+             
+    label(class="pure-overlay" for='pure-toggle-left' data-overlay='left')

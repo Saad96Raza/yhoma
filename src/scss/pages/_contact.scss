@@ -1,0 +1,34 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ======== */
+/* CONTACT  CSS */
+/* ======== */
+
+
+section{
+    &.contact-section-1{
+        position: relative;
+        background: url('../media/banner/bg-3.jpg') no-repeat center/cover;
+        background-attachment: fixed;      
+       
+    }
+    &.contact-section-2{
+        background: ss-var($colors,primary,'primary2');
+    }
+    &.contact-section-3{
+        .grid{
+           
+            .left{
+                .body-font{
+                    color: ss-var($colors,neutral,'white');
+                }
+                &:nth-child(1){
+                    background: ss-var($colors,primary,'primary1');
+                }
+            }
+        }
+    }
+
+
+}

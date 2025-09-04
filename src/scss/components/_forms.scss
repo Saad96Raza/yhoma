@@ -2,3 +2,70 @@
 @use '../abstracts/' as *;
 
 /* Forms */
+
+
+
+.input-field {
+  width: auto;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  color: ss-var($colors,neutral,'gray');
+
+  padding: rem(20) 0;
+  input {
+    width: 100%;
+    height: 100%;
+    color: ss-var($colors,neutral,'gray');
+    padding-top: rem(20);
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + .label-name .content-name,
+    &:valid + .label-name .content-name {
+      transform: translateY(-100%);
+      font-size: rem(18);
+      left: 0;
+      color:  ss-var($colors,neutral,'black');
+    }
+
+    &:focus + .label-name::after,
+    &:valid + .label-name::after {
+      transform: translateX(0);
+    }
+  }
+
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: rem(1) solid ss-var($colors,neutral,'gray');
+    
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: rem(-1);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom: rem(2) solid ss-var($colors,neutral,'black');
+      transform: translateX(-100%);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .content-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: rem(5);
+    transition: all 0.3s ease;
+  }
+}

@@ -1,0 +1,64 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Navigation */
+
+
+
+header{
+  .link-reveal {
+  display: flex;
+  align-items: center;
+  
+
+  .link-mask {
+    position: relative;
+    padding: 0;
+    height: $nav-link;   
+    overflow: hidden;
+
+    .link-container {
+      transition: transform 0.4s ease;
+      transform: translateY(0);
+
+      /* both .title and .link-font (your markup uses both) */
+         // apply to both title and link-font
+      .link-font {
+        display: block;
+        line-height: $nav-link;
+        transition: transform 0.4s ease;
+        white-space: nowrap;
+      }
+
+      .link-title-1 {
+        transform-origin: right center;
+        transform: rotate(0);
+      }
+
+      .link-title-2 {
+        transform-origin: left center;
+        transform: rotate(20deg);
+      }
+    } /* .link-container */
+  } /* .link-mask */
+
+  /* Hover actions — target nested elements explicitly */
+  &:hover {
+    text-decoration: none;
+    .link-mask {
+      .link-container {
+        transform: translateY(-$nav-link); /* moves up by font-size (20px) */
+      }
+
+      .link-container .link-title-1 {
+        transform: rotate(20deg);
+      }
+
+      .link-container .link-title-2 {
+        transform: rotate(0deg);
+      }
+    }
+  } /* &:hover */
+}
+
+}

@@ -1,0 +1,79 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ======== */
+/* PORTFOLIO CSS */
+/* ======== */
+
+section{
+    &.portfolio-section-1{
+        background: ss-var($colors,primary,'primary2');
+        .shape-divider{
+            path{               
+                fill-opacity:1;
+                fill: ss-var($colors,neutral,'white');
+            }
+        }
+    }
+    &.portfolio-section-2{
+        .left{
+            background: ss-var($colors,primary,'primary2');
+
+        }
+    }
+    &.portfolio-section-3{
+        .grid{
+            .feature{
+                padding: rem(120) rem(40);
+                &:nth-child(odd) {
+                    background: ss-var($colors,primary,'primary1');
+                }
+                &:nth-child(even) {
+                   background: ss-var($colors,primary,'primary2');
+                }
+                img{
+                    width: rem(100);
+                    height: auto;
+                }
+            }
+            
+        }
+    }
+
+    &.portfolio-section-4{
+        .content{
+            background: ss-var($colors,primary,'primary2');
+            .grid{
+                .white{
+                    background: ss-var($colors,neutral,'white');
+                }
+            }
+            svg{
+                path{
+                    fill:ss-var($colors,neutral,'white');
+                }
+            }
+        }
+    }
+    &.portfolio-section-5{
+        background: ss-var($colors,primary,'primary2');
+        svg{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            path{
+                fill: ss-var($colors,neutral,'white');
+            }
+        }
+        .feature{
+            img{
+                width: rem(100);
+                height: auto;
+            }
+        }
+    }
+    &.portfolio-section-7{
+        background: ss-var($colors,primary,'primary2');
+
+    }
+}

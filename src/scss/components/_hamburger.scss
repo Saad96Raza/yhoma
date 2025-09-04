@@ -1,0 +1,112 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Hamburger */
+
+.menu-toggle {
+  flex: 0 0 auto;
+  width: rem(80);
+  height: rem(80);
+  cursor: pointer;
+  position: relative;
+
+  // Hamburger lines
+  .hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      display: block;
+      width: rem(68);
+      height: rem(2);
+      margin-bottom: rem(4);
+      overflow: hidden;
+      position: relative;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(15, 15, 15);
+        transform: translateX(-200%);
+        transition: transform 300ms ease;
+      }
+
+      &:after {
+        transform: translateX(0);
+      }
+
+      &:nth-child(2):before,
+      &:nth-child(2):after {
+        transition-delay: 75ms;
+      }
+
+      &:last-child:before,
+      &:last-child:after {
+        transition-delay: 150ms;
+      }
+    }
+  }
+
+  // Cross lines
+  .cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      display: block;
+      width: rem(60);
+      height: rem(2);
+      background-color: rgb(15, 15, 15);
+      transform: translateY(50%) rotate(45deg) scaleX(0);
+      transition: transform 200ms ease;
+
+      &:last-child {
+        transform: translateY(-50%) rotate(-45deg) scaleX(0);
+      }
+    }
+  }
+
+  // Hover effects
+  &:hover .hamburger span:before {
+    transform: translateX(0);
+  }
+
+  &:hover .hamburger span:after {
+    transform: translateX(200%);
+  }
+
+  // Active state
+  &.active {
+    .hamburger span:before {
+      transform: translateX(100%);
+    }
+
+    .hamburger span:after {
+      transform: translateX(200%);
+    }
+
+    .cross span {
+      transition-delay: 450ms;
+      transform: translateY(50%) rotate(45deg) scaleX(1);
+
+      &:last-child {
+        transform: translateY(-50%) rotate(-45deg) scaleX(1);
+      }
+    }
+  }
+}
+
+
+
+

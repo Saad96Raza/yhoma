@@ -6,3 +6,39 @@
 .annoucment-header{
     background: ss-var($colors,primary,'primary1');
 }
+header{
+
+        
+    .pure-toggle-label{
+        position: absolute;
+        transform: translate( -50% , -50%);
+        width: 0;
+        height: 0;
+    
+    }
+}
+.offcanvas{
+    .pure-drawer{
+        z-index: 999;
+        background: ss-var($colors,primary,'primary2');
+        li a{
+            text-decoration: none;
+            &:hover{
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

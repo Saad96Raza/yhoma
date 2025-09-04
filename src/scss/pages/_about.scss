@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+/* ======== */
+/* Home CSS */
+/* ======== */
+
+
+
+section{
+    &.about-section-3{
+        svg{
+            width: 120rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            path{
+                fill: ss-var($colors,primary,'primary2');
+            }
+        }
+            .left{
+                background: ss-var($colors,primary,'primary2');
+            }
+    }
+    &.about-section-4{
+        background: ss-var($colors,primary,'primary2');
+    }
+}
+

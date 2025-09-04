@@ -29,3 +29,7 @@
 @include font-face($font-Mclassic, "../fonts/mclassic/MCLASSICFONT-Regular", 100, "normal", woff2 woff ttf);
 
 @include font-face($font-playfair, "../fonts/playfair/playfair-display.regular", 100, "normal", ttf);
+
+@include font-face($font-aveline, "../fonts/aveline/Avelline", 100, "normal", ttf otf);
+
+

@@ -5,8 +5,9 @@ head
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title #{htmlWebpackPlugin.options.title}
 body(data-barba="wrapper")
-  include  ../../src/views/partials/header.pug
-  main(data-barba="container")
-    block content
-  include  ../../src/views/partials/footer.pug
+  div(class="smooth-scroll")
+    include  ../../src/views/partials/header.pug
+    main(data-barba="container")
+        block content
+    include  ../../src/views/partials/footer.pug
 

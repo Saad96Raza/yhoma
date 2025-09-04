@@ -3,18 +3,30 @@
 
 /* Cards */
 
-.cards{
+.card-2{
     .lg-font{
         font-family: $font-Mclassic;
     }
-    position: absolute;
     background: ss-var($colors , neutral ,'white');
-    width: rem(760);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: rem(160) rem(120);
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    border-top-left-radius: 48%;
+    border-top-right-radius: 48%;
+    padding: rem(120) rem(60);
+    z-index: 1;
+}
+
+.card-1{
+    background: ss-var($colors , neutral ,'white');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 48%;
+    border-top-right-radius: 48%;
+    @apply py-[7.5rem] px-[1rem] md:px-[4.75rem];
+
+
 }

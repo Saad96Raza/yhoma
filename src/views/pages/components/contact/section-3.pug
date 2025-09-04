@@ -1,0 +1,41 @@
+include ../../mixins/input.pug
+include ../../mixins/call-to-action.pug
+section(class="section contact-section-3")
+    div(class="grid  grid-cols-1 md:grid-cols-[40%_auto]")
+        div(class="p-[2rem] md:p-[13.125rem] left")
+            ul(class="grid grid-cols-1  gap-[1rem] md:gap-[3rem]") 
+                li 
+                  div(class="flex flex-col gap-[0.4rem]")
+                     h4(class="body-font font-medium text-center")  Mabel Estate
+                     p(class="body-font text-center") Mabel Estate is located in Henley, an easy 10-minute drive from Airport.
+                li 
+                  div(class="flex flex-col gap-[0.4rem]")
+                     h4(class="body-font font-medium text-center")  Address
+                     p(class="body-font text-center") Address Goes Here
+                li 
+                  div(class="flex flex-col gap-[0.4rem]")
+                     h4(class="body-font font-medium text-center")  Phone
+                     p(class="body-font text-center") 1234 456 789
+                li 
+                  div(class="flex flex-col gap-[0.4rem] ")
+                     a(class="body-font underline-text font-medium text-center w-fit mx-auto")  Book Now
+        div(class="p-[2rem] md:p-[13.125rem]")
+            form(class="grid grid-cols-1 md:grid-cols-2 gap-[2rem]" action="")
+                    +input('first name','first','first-name','pt-[2rem]')
+
+                    +input('last name','last','last-name' , 'pt-[2rem]')
+
+                    +input('email','email','user-email' , 'pt-[2rem]')
+
+                    +input('phone','phone','user-phone' , 'pt-[2rem]')
+
+                    +input('subject','subject','user-subject' ,'md:col-span-2 pt-[2rem]')
+
+                    +input('message','message','user-message' ,'md:col-span-2 pt-[2rem]')
+
+                    div(class="py-[4rem]") 
+                      +CTA('Send Your Query')
+                 
+
+
+

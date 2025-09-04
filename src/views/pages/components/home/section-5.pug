@@ -1,0 +1,21 @@
+include ../../mixins/card-2.pug
+
+section(class="section home-section-5")
+    svg(viewbox='0 0 1440 182')
+            path(d='M0,128L48,117.3C96,107,192,85,288,101.3C384,117,480,171,576,181.3C672,192,768,160,864,144C960,128,1056,128,1152,117.3C1248,107,1344,85,1392,74.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z')
+
+    div(class="container py-[10rem] relative")
+        h2(class="xxl-font text-center py-[5rem]") Packages
+        div(class="grid grid-cols-1 md:grid-cols-2 gap-[2rem]")
+            div(class="mx-auto") 
+                 +PCARD(
+                    "Wedding Party Package",
+                    "Fully self-contained accommodation - the ideal home away from home for couples and families.",
+                    "h2"
+                )
+            div(class="mx-auto")  
+                +PCARD(
+                    "Couples Event Escape.",
+                    "Fully self-contained accommodation - the ideal home away from home for couples and families.",
+                    "h2"
+                )    

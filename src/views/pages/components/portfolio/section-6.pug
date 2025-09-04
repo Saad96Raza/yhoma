@@ -1,0 +1,19 @@
+section(class="section portfolio-section-6")
+    div(class="container")
+        div(class="flex") 
+            h2(class="lg-font w-fit mx-auto") Gallery
+
+        div(class="flex  gap-[4rem] py-[5rem]")
+            div(class="swiper gallery")
+                div(class="swiper-wrapper")
+                    -for(let i = 0; i < 6; ++i){
+                        div(class="swiper-slide px-0 md:px-[10rem]")
+                            img(src="./media/banner/bg-2.png", alt="")
+                    - }
+                div(class="swiper-button-prev")
+                    div(class="navigation")
+                        a(rel="prev" class="prev") 
+                div(class="swiper-button-next")
+                    div(class="navigation")
+                        a(rel="next" class="next") 
+        

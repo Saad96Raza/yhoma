@@ -1,0 +1,7 @@
+mixin BLOCKREVEAL(title,tag,classParent="",classChild)
+    - var letter = title.split('')
+    #{tag}(class="text-center overflow-hidden"+" "+classParent data-scroll data-scroll-class="is-inview")
+        - for(let i = 0; i < letter.length;i++)
+            if letter[i] === ' '
+                span &nbsp;&nbsp;&nbsp;&nbsp;
+            span(class=""+" "+classChild style=`transition-delay:${i*0.040}s;`) #{letter[i]}

@@ -62,7 +62,7 @@ ol {
 body {
     min-height: 100vh;
     // text-rendering: optimizeSpeed;
-    // line-height: 1.5;
+    line-height: 1.5;
     font-family: $font-playfair;
 }
 
@@ -85,14 +85,16 @@ section,
 header,
 footer{
     .container{
-        @apply px-[1rem] md:px-[13.125rem];
+        @apply px-[2rem] md:px-[13.125rem];
     }
+    
 }
 
 p,
 span{
     font-family: $font-raleway;
 }
+
 
 a{
 
@@ -103,8 +105,8 @@ a{
         content: '';
         width: 100%;
         height: rem(2);
-        bottom: rem(-5);
-        background: ss-var($colors,neutral,'black');
+        bottom: 0;
+        background:ss-var($colors,neutral,'white');
      }
      &:hover{
         text-decoration: none;

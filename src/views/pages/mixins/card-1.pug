@@ -1,0 +1,7 @@
+include ./call-to-action.pug
+
+mixin OCARD(subtitle,title, tag)
+  div(class="card-1 w-fit flex flex-col gap-[3rem] fade-in" data-scroll data-scroll-class="is-inview" data-scroll-repeat="true")
+    p(class="sm-font text-center") #{subtitle}
+    #{tag}(class="md-font text-center max-w-[12ch]") #{title} 
+    +CTA("book now")

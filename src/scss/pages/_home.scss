@@ -6,9 +6,65 @@
 /* ======== */
 
 
+
 section{
     &.home-section-1{
         background: ss-var($colors,primary,'primary2');
+        .shape-divider{
+            path{               
+                fill-opacity:1;
+                fill: ss-var($colors,neutral,'white');
+            }
+        }
+    }
+    &.home-section-3{
+        background: url('../media/banner/bg-1.jpg') no-repeat center/cover;
+        position: relative;
+        
+       
+        svg{
+            position: absolute;
+            bottom: 0;
+            path{
+                fill: ss-var($colors,neutral,'white');
+            }
+        }
+    }
+    &.home-section-4{
+        .content{
+            background: ss-var($colors,primary,'primary2');
+
+        }
+    }
+    &.home-section-5{
+        position: relative;
+        background: url('../media/banner/bg-3.jpg') no-repeat center/cover;
+        .xxl-font{
+            color: ss-var($colors,neutral,'black');
+        }
+        svg {
+            position: relative;   
+            z-index: 2;           
+            fill: ss-var($colors, 'primary', 'primary2');
+        }
+        .container{
+            z-index: 2;   
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0; 
+            background: rgba(ss-var($colors, neutral, 'white'), 0.9); 
+            z-index: 1;           // ✅ higher than svg
+        }
+              
+    }
+    &.home-section-6{
+        background: ss-var($colors,primary,'primary2');
+        position: relative;
         
     }
+
+    
 }

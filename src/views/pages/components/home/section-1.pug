@@ -1,21 +1,21 @@
-include ../../mixins/primary-button.pug
+include ../../mixins/card-2.pug
 
 
-section(class="section home-section-1")
+section(class="section home-section-1 relative mask-container")
     div(class="container relative")
-     div(class="grid grid-cols-1 md:grid-cols-[40%_auto] gap-[10rem]")
-        div(class="flex justify-center items-center  relative")
-            img(src="./media/banner/4.jpg" class="object-fill p-[5rem] " alt="")
-        div(class="flex justify-end")
-            img(src="./media/banner/6.jpg" class="object-fill " alt="") 
-        div(class="cards top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-[2rem]")    
-            h1(class="lg-font text-center") Relax. <br> Savour. <br>  Enjoy.
-            p(class="body-font text-center")
-             |Fully self-contained accommodation - the ideal home away from home for couples and families.
-
-            +primaryButton("book now")
- 
-
- 
+        div(class="grid grid-cols-1 md:grid-cols-[40%_auto] relative  gap-[1rem] md:gap-[5rem]")
+            div(class="flex justify-center items-center md:col-start-1 md:row-start-1 oveflow-hidden")
+                img(src="./media/banner/4.jpg" class="p-0 md:p-[5rem] reveal-bg" alt=""  data-scroll data-scroll-class="is-inview"   data-scroll-repeat="true")
+            div(class="gap-[2rem] py-0 md:py-[5rem] flex justify-center items-center md:col-start-1 md:row-start-1 md:col-span-2")
+                +PCARD(
+                    "Relax. Savour. Enjoy.",
+                    "Fully self-contained accommodation - the ideal home away from home for couples and families.",
+                    "h1"
+                )
+            div(class="flex justify-end md:col-start-2 md:row-start-1 overflow-hidden")
+                img(src="./media/banner/6.jpg" class="reveal-bg"  alt=""  style="transition-delay: 0.2s;"  data-scroll data-scroll-class="is-inview"   data-scroll-repeat="true")
+    svg(viewbox='0 0 1440 320' class="shape-divider")
+        path(d='M0,256L48,234.7C96,213,192,171,288,160C384,149,480,171,576,170.7C672,171,768,149,864,122.7C960,96,1056,64,1152,42.7C1248,21,1344,11,1392,5.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z')
+    
 
 

@@ -3,11 +3,11 @@
 
 /* Buttons */
 
-.primary-button{
-    @include primary-button(30, 20);   // custom padding (padding: 10px 30px)
+.call-to-action{
+    @include CTA(30, 20);   // custom padding (padding: 10px 30px)
 
 }
 
-.card-button{
-    @include primary-button(60, 20);   // custom padding (padding: 10px 30px)
+.call-to-action-card{
+    @include CTA(60, 20);   // custom padding (padding: 10px 30px)
 }

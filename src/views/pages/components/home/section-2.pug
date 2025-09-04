@@ -1,0 +1,32 @@
+include ../../mixins/call-to-action.pug
+include ../../mixins/block-reveal-title.pug
+include ../../mixins/block-reveal-text.pug
+include ../../mixins/fade-text.pug
+
+
+
+section(class="section home-section-2")
+    div(class="container py-[10rem]")
+        div(class="grid grid-cols-1 gap-[4rem]")
+            div(class="mx-auto flex flex-col gap-[3rem]")
+                +FTEXT(
+                    'Luxurious Accommodation'
+                )
+                +BLOCKREVEAL(
+                    'The ideal Beach getaway',
+                    'h2',
+                    'block-reveal-title',
+                    'lg-font'
+                )
+                +BRTEXT(
+                    'Mabel Estate is beautifully appointed, fully self-contained holiday accommodation. With ample space for 8 guests, off-street parking and proximity to a wide range of activities for all ages, it’s worth booking our accommodation for an extra day or two to take in everything on offer!',
+                    '',
+                    'block-reveal-title'
+                )
+            div(class="mx-auto")
+                 +CTA("propery feature")
+
+            
+    
+
+

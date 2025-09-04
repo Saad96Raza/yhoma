@@ -1,0 +1,7 @@
+
+mixin input(title,name,id,extraClass="")
+    div(class=`input-field ${extraClass}`)
+        input(type='text' id=id name=name autocomplete='off' required='')
+        label(class=`label-name ` for=id) 
+            span(class="content-name body-font")
+                | #{title}      

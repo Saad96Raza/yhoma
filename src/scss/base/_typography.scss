@@ -51,43 +51,69 @@
 
 
 .link-font{
-  @apply 
-  text-[1.6rem]
+  @apply  
   no-underline
   capitalize;
-   
+  font-family: $font-playfair; 
+  font-size: $nav-link;   
 }
 .link-font:hover{
      @apply no-underline;
 }
 
+.xxl-font{
+    @apply text-[4rem] 
+    md:text-[8rem];
+    color: ss-var($colors,neutral,'white');
+    mix-blend-mode: difference;
+    font-family: $font-Mclassic; 
+}
+
 .xl-font,
 .lg-font {
-    @apply text-[6rem]
-    leading-[1.2]; 
+    @apply  text-[3rem]
+    md:text-[5rem]
+    uppercase
+    leading-[1.2];
+    font-family: $font-Mclassic; 
 }
 
 .md-font{
-    @apply text-[]; 
+    @apply 
+    text-[3rem]
+    font-medium
+    capitalize;
+    font-family: $font-Mclassic;  
 }
 
 .sm-font {
-    @apply text-[]; 
+    @apply text-[3.5rem] md:text-[5.5rem]
+    italic 
+    leading-none;    
+    font-family: $font-aveline; 
 }
 
 .body-font {
-    @apply text-[2rem]
-    leading-none
+    @apply text-[1.4rem] md:text-[2rem]
     font-extralight
-    capitalize;  
+    capitalize
+    tracking-normal;
+    font-family: $font-raleway;
+     span{
+        @apply text-[1.4rem]
+        lowercase
+        tracking-normal
+        md:text-[2rem];
+    }  
 }
+
+
 
 .highlight-font,
 .field-font {
-   @apply text-[]; 
+   color: ss-var($colors,neutral,'white') 
 }
 
 .direction {
-   @apply text-[]; 
 }
 
