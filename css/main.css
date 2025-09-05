@@ -907,6 +907,26 @@ li {
     font-size: 1.8rem;
   }
 }
+.xl-font span,
+.lg-font span, .xl-font,
+.lg-font{
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+@media (min-width: 48rem){
+  .xl-font span,
+.lg-font span, .xl-font,
+.lg-font{
+    font-size: 5rem;
+  }
+}
+.xl-font span,
+.lg-font span, .xl-font,
+.lg-font {
+  font-family: "Mclassic";
+}
+
 .link-font{
   text-transform: capitalize;
   text-decoration-line: none;
@@ -931,25 +951,6 @@ li {
 .xxl-font {
   color: #ffffff;
   mix-blend-mode: difference;
-  font-family: "Mclassic";
-}
-
-.xl-font,
-.lg-font{
-  font-size: 3rem;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-@media (min-width: 48rem){
-  .xl-font,
-.lg-font{
-    font-size: 5rem;
-  }
-}
-
-.xl-font,
-.lg-font {
   font-family: "Mclassic";
 }
 
@@ -1879,7 +1880,7 @@ section .block-reveal-title span {
   display: inline-block;
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 0.6s ease, opacity 1s ease;
+  transition: transform 0.6s ease, opacity 3 ease;
 }
 section .block-reveal-title.is-inview span {
   opacity: 1;
@@ -1903,7 +1904,6 @@ section .block-reveal-title.is-inview span {
   background-repeat: no-repeat;
   opacity: 0;
   clip-path: circle(0% at 50% 50%);
-  transform: scale(1.2);
   transition: clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), opacity 3s ease, transform 3s ease;
 }
 .reveal-bg.is-inview {
@@ -5724,6 +5724,69 @@ video {
 }
 .font-medium{
   font-weight: 500;
+}
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.join{
+  display: inline-flex;
+  align-items: stretch;
+  --join-ss: 0;
+  --join-se: 0;
+  --join-es: 0;
+  --join-ee: 0;
+}
+.join :where(.join-item){
+  border-start-start-radius: var(--join-ss, 0);
+  border-start-end-radius: var(--join-se, 0);
+  border-end-start-radius: var(--join-es, 0);
+  border-end-end-radius: var(--join-ee, 0);
+}
+.join :where(.join-item) *{
+  --join-ss: var(--radius-field);
+  --join-se: var(--radius-field);
+  --join-es: var(--radius-field);
+  --join-ee: var(--radius-field);
+}
+.join > .join-item:where(:first-child){
+  --join-ss: var(--radius-field);
+  --join-se: 0;
+  --join-es: var(--radius-field);
+  --join-ee: 0;
+}
+.join :first-child:not(:last-child) :where(.join-item){
+  --join-ss: var(--radius-field);
+  --join-se: 0;
+  --join-es: var(--radius-field);
+  --join-ee: 0;
+}
+.join > .join-item:where(:last-child){
+  --join-ss: 0;
+  --join-se: var(--radius-field);
+  --join-es: 0;
+  --join-ee: var(--radius-field);
+}
+.join :last-child:not(:first-child) :where(.join-item){
+  --join-ss: 0;
+  --join-se: var(--radius-field);
+  --join-es: 0;
+  --join-ee: var(--radius-field);
+}
+.join > .join-item:where(:only-child){
+  --join-ss: var(--radius-field);
+  --join-se: var(--radius-field);
+  --join-es: var(--radius-field);
+  --join-ee: var(--radius-field);
+}
+.join :only-child :where(.join-item){
+  --join-ss: var(--radius-field);
+  --join-se: var(--radius-field);
+  --join-es: var(--radius-field);
+  --join-ee: var(--radius-field);
 }
 /* ======== */
 /* Main DAISYUI DECORATIVES */
