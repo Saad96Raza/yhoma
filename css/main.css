@@ -599,6 +599,117 @@ button.swiper-pagination-bullet {
 .swiper-fade .swiper-slide-active .swiper-slide-active {
   pointer-events: auto;
 }
+/* Recommended styles for Splitting */
+.splitting .word,
+.splitting .char {
+  display: inline-block;
+}
+
+/* Psuedo-element chars */
+.splitting .char {
+  position: relative;
+}
+
+/**
+ * Populate the psuedo elements with the character to allow for expanded effects
+ * Set to `display: none` by default; just add `display: block` when you want
+ * to use the psuedo elements
+ */
+.splitting .char::before,
+.splitting .char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* Expanded CSS Variables */
+.splitting {
+  /* The center word index */
+  --word-center: calc((var(--word-total) - 1) / 2);
+  /* The center character index */
+  --char-center: calc((var(--char-total) - 1) / 2);
+  /* The center character index */
+  --line-center: calc((var(--line-total) - 1) / 2);
+}
+
+.splitting .word {
+  /* Pecent (0-1) of the word's position */
+  --word-percent: calc(var(--word-index) / var(--word-total));
+  /* Pecent (0-1) of the line's position */
+  --line-percent: calc(var(--line-index) / var(--line-total));
+}
+
+.splitting .char {
+  /* Percent (0-1) of the char's position */
+  --char-percent: calc(var(--char-index) / var(--char-total));
+  /* Offset from center, positive & negative */
+  --char-offset: calc(var(--char-index) - var(--char-center));
+  /* Absolute distance from center, only positive */
+  --distance: calc(
+     (var(--char-offset) * var(--char-offset)) / var(--char-center)
+  );
+  /* Distance from center where -1 is the far left, 0 is center, 1 is far right */
+  --distance-sine: calc(var(--char-offset) / var(--char-center));
+  /* Distance from center where 1 is far left/far right, 0 is center */
+  --distance-percent: calc((var(--distance) / var(--char-center)));
+}
+.splitting.cells img {
+  width: 100%;
+  display: block;
+}
+
+@supports (display: grid) {
+  .splitting.cells {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    visibility: hidden;
+  }
+  .splitting .cell-grid {
+    background: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(var(--row-total), 1fr)/repeat(var(--col-total), 1fr);
+  }
+  .splitting .cell {
+    background: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+  .splitting .cell-inner {
+    background: inherit;
+    position: absolute;
+    visibility: visible;
+    /* Size to fit the whole container size */
+    width: calc(100% * var(--col-total));
+    height: calc(100% * var(--row-total));
+    /* Position properly */
+    left: calc(-100% * var(--col-index));
+    top: calc(-100% * var(--row-index));
+  }
+  /* Helper variables for advanced effects */
+  .splitting .cell {
+    --center-x: calc((var(--col-total) - 1) / 2);
+    --center-y: calc((var(--row-total) - 1) / 2);
+    /* Offset from center, positive & negative */
+    --offset-x: calc(var(--col-index) - var(--center-x));
+    --offset-y: calc(var(--row-index) - var(--center-y));
+    /* Absolute distance from center, only positive */
+    --distance-x: calc( (var(--offset-x) * var(--offset-x)) / var(--center-x) );
+    /* Absolute distance from center, only positive */
+    --distance-y: calc( (var(--offset-y) * var(--offset-y)) / var(--center-y) );
+  }
+}
 @charset "UTF-8";
 /* ============================== */
 /* Export variables to JavaScript */
@@ -1880,7 +1991,7 @@ section .block-reveal-title span {
   display: inline-block;
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 0.6s ease, opacity 3 ease;
+  transition: transform 1s ease, opacity 1 ease;
 }
 section .block-reveal-title.is-inview span {
   opacity: 1;
@@ -1890,7 +2001,7 @@ section .block-reveal-title.is-inview span {
 .fade-in {
   opacity: 0;
   transform: translateY(3.75rem);
-  transition: opacity 3s ease, transform 2s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 .fade-in.is-inview {
   transform: translateY(0);
@@ -1904,12 +2015,21 @@ section .block-reveal-title.is-inview span {
   background-repeat: no-repeat;
   opacity: 0;
   clip-path: circle(0% at 50% 50%);
+  transform: scale(1.2);
   transition: clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), opacity 3s ease, transform 3s ease;
 }
 .reveal-bg.is-inview {
   opacity: 1;
   clip-path: circle(150% at 50% 50%);
   transform: scale(1);
+}
+
+h2.splitting .whitespace {
+  width: 1.875rem;
+}
+
+p.splitting .whitespace {
+  width: 0.625rem;
 }
 
 /* Icons */
@@ -2029,11 +2149,34 @@ section.home-section-1 .shape-divider path {
   fill: #ffffff;
 }
 section.home-section-3 {
-  background: url(../media/bg-1.jpg) no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
+}
+section.home-section-3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../media/bg-1.jpg) no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transform: scale(1.2);
+  transition: clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), opacity 3s ease, transform 3s ease;
+}
+section.home-section-3.is-inview::before {
+  opacity: 1;
+  clip-path: circle(150% at 50% 50%);
+  transform: scale(1);
 }
 section.home-section-3 svg {
   position: absolute;
+  display: inline-block;
   bottom: 0;
 }
 section.home-section-3 svg path {
@@ -5731,62 +5874,6 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-.join{
-  display: inline-flex;
-  align-items: stretch;
-  --join-ss: 0;
-  --join-se: 0;
-  --join-es: 0;
-  --join-ee: 0;
-}
-.join :where(.join-item){
-  border-start-start-radius: var(--join-ss, 0);
-  border-start-end-radius: var(--join-se, 0);
-  border-end-start-radius: var(--join-es, 0);
-  border-end-end-radius: var(--join-ee, 0);
-}
-.join :where(.join-item) *{
-  --join-ss: var(--radius-field);
-  --join-se: var(--radius-field);
-  --join-es: var(--radius-field);
-  --join-ee: var(--radius-field);
-}
-.join > .join-item:where(:first-child){
-  --join-ss: var(--radius-field);
-  --join-se: 0;
-  --join-es: var(--radius-field);
-  --join-ee: 0;
-}
-.join :first-child:not(:last-child) :where(.join-item){
-  --join-ss: var(--radius-field);
-  --join-se: 0;
-  --join-es: var(--radius-field);
-  --join-ee: 0;
-}
-.join > .join-item:where(:last-child){
-  --join-ss: 0;
-  --join-se: var(--radius-field);
-  --join-es: 0;
-  --join-ee: var(--radius-field);
-}
-.join :last-child:not(:first-child) :where(.join-item){
-  --join-ss: 0;
-  --join-se: var(--radius-field);
-  --join-es: 0;
-  --join-ee: var(--radius-field);
-}
-.join > .join-item:where(:only-child){
-  --join-ss: var(--radius-field);
-  --join-se: var(--radius-field);
-  --join-es: var(--radius-field);
-  --join-ee: var(--radius-field);
-}
-.join :only-child :where(.join-item){
-  --join-ss: var(--radius-field);
-  --join-se: var(--radius-field);
-  --join-es: var(--radius-field);
-  --join-ee: var(--radius-field);
 }
 /* ======== */
 /* Main DAISYUI DECORATIVES */
