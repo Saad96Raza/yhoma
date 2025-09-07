@@ -38227,7 +38227,7 @@ var App = /*#__PURE__*/ function() {
         };
         this.createLocomotiveScroll();
         this.createLettersComponents();
-        this.createPreloader();
+        // this.createPreloader()
         this.createAjaxNavigation();
         this.createNavbar();
         this.createReRender();
@@ -38338,7 +38338,7 @@ var App = /*#__PURE__*/ function() {
                     multiplier: 1.4,
                     smoothMobile: false
                 });
-                this.locomotiveScroll.stop();
+            // this.locomotiveScroll.stop()
             }
         },
         {
@@ -38365,7 +38365,7 @@ var App = /*#__PURE__*/ function() {
                         _this.toggle.checked = !_this.toggle.checked;
                     }
                 });
-                window.addEventListener('load', this.onLoad.bind(this));
+            // window.addEventListener('load',this.onLoad.bind(this))
             }
         }
     ]);
