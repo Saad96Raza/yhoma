@@ -38295,7 +38295,7 @@ var App = /*#__PURE__*/ function() {
                 }).to(that.title, {
                     y: '-100%',
                     duration: 1,
-                    ease: 'expo.in',
+                    ease: 'circ.easeInOut',
                     stagger: 0.1
                 });
             }
@@ -38303,7 +38303,6 @@ var App = /*#__PURE__*/ function() {
         {
             key: "onLoad",
             value: function onLoad() {
-                this.preloaderAnimation.repeat(0);
                 this.createPreloader().to(this.height, {
                     height: 0,
                     duration: 1,
