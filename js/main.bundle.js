@@ -39308,7 +39308,8 @@ var App = /*#__PURE__*/ function() {
                 that.title = (0,lodash__WEBPACK_IMPORTED_MODULE_8__.toArray)(document.querySelectorAll('.preloader-title .char'));
                 pace_js__WEBPACK_IMPORTED_MODULE_9___default().on('start', function() {
                     _this.preloader = gsap__WEBPACK_IMPORTED_MODULE_11__["default"].timeline({
-                        repeat: -1
+                        repeat: -1,
+                        paused: true
                     }).to(that.title, {
                         y: 0,
                         duration: 1,
@@ -39320,10 +39321,11 @@ var App = /*#__PURE__*/ function() {
                         ease: 'circ.easeInOut',
                         stagger: 0.1
                     });
+                    _this.preloader.play(); // << start playing the loop
                 });
                 pace_js__WEBPACK_IMPORTED_MODULE_9___default().on('done', function() {
                     _this.height = document.querySelector('.preloader');
-                    _this.preloader.repeat(0);
+                    _this.preloader.repeat(0).play();
                     _this.preloader.to(_this.height, {
                         height: 0,
                         duration: 1,
