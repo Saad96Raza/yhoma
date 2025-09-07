@@ -38287,7 +38287,9 @@ var App = /*#__PURE__*/ function() {
                 var that = this;
                 that.title = (0,lodash__WEBPACK_IMPORTED_MODULE_8__.toArray)(document.querySelectorAll('.preloader-title .char'));
                 this.height = document.querySelector('.preloader');
-                return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].timeline().to(that.title, {
+                return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].timeline({
+                    repeat: -1
+                }).to(that.title, {
                     y: 0,
                     duration: 1,
                     ease: 'expo.out',
@@ -38303,7 +38305,8 @@ var App = /*#__PURE__*/ function() {
         {
             key: "onLoad",
             value: function onLoad() {
-                this.createPreloader().to(this.height, {
+                this.preloaderAnimation.repeat(0);
+                this.preloaderAnimation.to(this.height, {
                     height: 0,
                     duration: 1,
                     ease: 'expo.out'
