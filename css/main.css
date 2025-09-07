@@ -719,6 +719,7 @@ section.home-section-3, .card-2, .card-1 {
 
 section.home-section-5 .xxl-font, .xxl-font, .xxl-font span{
   font-size: 4rem;
+  font-weight: 100;
 }
 
 @media (min-width: 48rem){
@@ -736,16 +737,18 @@ section.home-section-5 .xxl-font, .xxl-font, .xxl-font span {
 .xl-font,
 .lg-font, .xl-font span,
 .lg-font span{
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 100;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1;
+  letter-spacing: -0.5rem;
 }
 
 @media (min-width: 48rem){
   .xl-font,
 .lg-font, .xl-font span,
 .lg-font span{
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 
@@ -755,27 +758,50 @@ section.home-section-5 .xxl-font, .xxl-font, .xxl-font span {
   font-family: "mabdy";
 }
 
-.body-font, .body-font .word{
+.body-font, .body-font .word .char{
   font-size: 1.4rem;
-  font-weight: 200;
   text-transform: capitalize;
   letter-spacing: 0em;
 }
 
 @media (min-width: 48rem){
-  .body-font, .body-font .word{
+  .body-font, .body-font .word .char{
     font-size: 2rem;
   }
 }
 
-.body-font, .body-font .word {
+.body-font, .body-font .word .char {
   font-family: "Raleway";
 }
 
-section.home-section-1, section.home-section-5::before, section.home-section-5::after {
-  background: linear-gradient(90deg, #eee7da 0%, #c0a88f 50%);
+section.home-section-1, section.home-section-5::before, section.home-section-5::after, .annoucment-header {
+  background: linear-gradient(90deg, #eee7da 0%, #c0a88f 45%);
   backdrop-filter: blur(6.25rem);
   -webkit-backdrop-filter: blur(1.25rem);
+}
+
+.card-2, .card-1 {
+  background: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 rm(20) 1.875rem rgba(57, 57, 57, 0.1);
+  backdrop-filter: blur(1.25rem);
+  -webkit-backdrop-filter: blur(20);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.23);
+  flex-direction: column;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 48rem){
+  .card-2, .card-1{
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+  }
 }
 
 /* ============================== */
@@ -900,6 +926,13 @@ body.load-variables::after {
   font-style: "normal";
   font-weight: 100;
   src: url(../fonts/MABDY.otf) format("opentype"), local("mabdy");
+  font-display: swap;
+}
+@font-face {
+  font-family: "mabdy";
+  font-style: "normal";
+  font-weight: 100;
+  src: url(../fonts/spark.ttf) format("truetype"), local("mabdy");
   font-display: swap;
 }
 /* ========== */
@@ -1107,6 +1140,7 @@ li {
   font-size: 3rem;
   font-weight: 100;
   text-transform: capitalize;
+  line-height: 1;
   font-family: "mabdy";
 }
 
@@ -1195,6 +1229,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: "playfair";
+  color: #393939;
 }
 
 img,
@@ -1713,38 +1748,14 @@ a.underline-text:hover {
 
 /* Cards */
 .card-2 {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.44);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.23);
-  flex-direction: column;
-  border-top-left-radius: 48%;
-  border-top-right-radius: 48%;
-  padding: 7.5rem 3.75rem;
   z-index: 1;
 }
 .card-2 .lg-font {
-  font-family: "Mclassic";
+  font-family: "mabdy";
 }
 
-.card-1 {
-  background: #ffffff;
-  flex-direction: column;
-  border-top-left-radius: 48%;
-  border-top-right-radius: 48%;
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 48rem){
-  .card-1{
-    padding-left: 4.75rem;
-    padding-right: 4.75rem;
-  }
+.card-1 .lg-font {
+  font-family: "mabdy";
 }
 
 /* carousel */ /* Custom Slider */ /* Forms */
@@ -2007,20 +2018,29 @@ html.has-scroll-dragging {
 /* ======== */
 /* ANIMATIONS CSS */
 /* ======== */
-section .splitting.block-reveal-title span {
+section h2.animation-block .word .char {
   display: inline-block;
   opacity: 0;
   transform: translateY(100%);
   transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
-}
-section .splitting.block-reveal-title span .char {
   transition-delay: calc(var(--char-index) * 0.06s);
-}
-section .splitting.block-reveal-title span.word {
-  transition-delay: calc(var(--word-index) * 0.02s);
   overflow: hidden;
 }
-section .splitting.block-reveal-title.is-inview span {
+section h2.animation-block.is-inview .word .char {
+  opacity: 1;
+  transform: translateY(0);
+}
+section p.animation-block .word {
+  overflow: hidden;
+}
+section p.animation-block .word .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
+  transition-delay: calc(var(--char-index) * 0.01s);
+}
+section p.animation-block.is-inview .word .char {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2138,10 +2158,6 @@ section .navigation .next::after {
 }
 
 /* Custom radio button */ /* Custom select input */ /* Tables */ /* Header */
-.annoucment-header {
-  background: #C0A88F;
-}
-
 header .pure-toggle-label {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -2150,11 +2166,11 @@ header .pure-toggle-label {
 }
 
 .offcanvas .pure-drawer {
-  z-index: 999;
   background: #eee7da;
 }
 .offcanvas .pure-drawer li a {
   text-decoration: none;
+  font-family: "Mclassic";
 }
 .offcanvas .pure-drawer li a:hover {
   text-decoration: none;
@@ -5908,6 +5924,12 @@ video {
 /* Main DAISYUI DECORATIVES */
 /* ======== */
 @plugin "daisyui";
+@media (min-width: 40rem){
+  .sm\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 @media (min-width: 48rem){
   .md\:order-1{
     order: 1;
