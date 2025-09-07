@@ -38185,17 +38185,9 @@ __webpack_require__.r(__webpack_exports__);
 /* ESM import */var splitting__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(splitting__WEBPACK_IMPORTED_MODULE_4__);
 /* ESM import */var splitting_dist_splitting_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! splitting/dist/splitting.css */ "./node_modules/splitting/dist/splitting.css");
 /* ESM import */var splitting_dist_splitting_cells_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! splitting/dist/splitting-cells.css */ "./node_modules/splitting/dist/splitting-cells.css");
-/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_7__);
-/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
-function _array_like_to_array(arr, len) {
-    if (len == null || len > arr.length) len = arr.length;
-    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
-    return arr2;
-}
-function _array_without_holes(arr) {
-    if (Array.isArray(arr)) return _array_like_to_array(arr);
-}
+/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
+/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_8__);
 function _class_call_check(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
         throw new TypeError("Cannot call a class as a function");
@@ -38214,23 +38206,6 @@ function _create_class(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
     return Constructor;
-}
-function _iterable_to_array(iter) {
-    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-}
-function _non_iterable_spread() {
-    throw new TypeError("Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _to_consumable_array(arr) {
-    return _array_without_holes(arr) || _iterable_to_array(arr) || _unsupported_iterable_to_array(arr) || _non_iterable_spread();
-}
-function _unsupported_iterable_to_array(o, minLen) {
-    if (!o) return;
-    if (typeof o === "string") return _array_like_to_array(o, minLen);
-    var n = Object.prototype.toString.call(o).slice(8, -1);
-    if (n === "Object" && o.constructor) n = o.constructor.name;
-    if (n === "Map" || n === "Set") return Array.from(n);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _array_like_to_array(o, minLen);
 }
 
 
@@ -38252,6 +38227,7 @@ var App = /*#__PURE__*/ function() {
         };
         this.createLocomotiveScroll();
         this.createLettersComponents();
+        this.preloaderAnimation = this.createPreloader();
         this.createAjaxNavigation();
         this.createNavbar();
         this.createReRender();
@@ -38302,12 +38278,36 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createLettersComponents",
             value: function createLettersComponents() {
-                this.splittingletters = _to_consumable_array(document.querySelectorAll('.animation-block'));
-                (0,lodash__WEBPACK_IMPORTED_MODULE_7__.forEach)(this.splittingletters, function(element) {
-                    splitting__WEBPACK_IMPORTED_MODULE_4___default()({
-                        target: element,
-                        by: 'chars'
-                    });
+                this.splitting = splitting__WEBPACK_IMPORTED_MODULE_4___default()();
+            }
+        },
+        {
+            key: "createPreloader",
+            value: function createPreloader() {
+                var that = this;
+                that.title = (0,lodash__WEBPACK_IMPORTED_MODULE_8__.toArray)(document.querySelectorAll('.preloader-title .char'));
+                this.height = document.querySelector('.preloader');
+                return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].timeline().to(that.title, {
+                    y: 0,
+                    duration: 1,
+                    ease: 'expo.out',
+                    stagger: 0.1
+                }).to(that.title, {
+                    y: '-100%',
+                    duration: 1,
+                    ease: 'expo.in',
+                    stagger: 0.1
+                });
+            }
+        },
+        {
+            key: "onLoad",
+            value: function onLoad() {
+                this.preloaderAnimation.repeat(0);
+                this.createPreloader().to(this.height, {
+                    height: 0,
+                    duration: 1,
+                    ease: 'expo.out'
                 });
             }
         },
@@ -38355,6 +38355,7 @@ var App = /*#__PURE__*/ function() {
                         _this.toggle.checked = !_this.toggle.checked;
                     }
                 });
+                window.addEventListener('load', this.onLoad.bind(this));
             }
         }
     ]);
