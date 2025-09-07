@@ -775,7 +775,7 @@ section.home-section-5 .xxl-font, .xxl-font, .xxl-font span {
 }
 
 section.home-section-1, section.home-section-5::before, section.home-section-5::after, .annoucment-header {
-  background: linear-gradient(90deg, #eee7da 0%, #c0a88f 45%);
+  background: linear-gradient(90deg, #eee7da 0%, #c0a88f 50%);
   backdrop-filter: blur(6.25rem);
   -webkit-backdrop-filter: blur(1.25rem);
 }
@@ -802,6 +802,16 @@ section.home-section-1, section.home-section-5::before, section.home-section-5::
     padding-left: 4.75rem;
     padding-right: 4.75rem;
   }
+}
+
+section.home-section-3::before, .reveal-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transform: scale(1.2);
+  transition: clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), opacity 3s ease, transform 3s ease;
 }
 
 /* ============================== */
@@ -2056,15 +2066,6 @@ section p.animation-block.is-inview .word .char {
 }
 
 /* 🔹 Background Image Reveal */
-.reveal-bg {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  clip-path: circle(0% at 50% 50%);
-  transform: scale(1.2);
-  transition: clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), opacity 3s ease, transform 3s ease;
-}
 .reveal-bg.is-inview {
   opacity: 1;
   clip-path: circle(150% at 50% 50%);
@@ -2212,13 +2213,7 @@ section.home-section-3::before {
   inset: 0;
   background: url(../media/bg-1.jpg) no-repeat center center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   z-index: -1;
-  opacity: 0;
-  clip-path: circle(0% at 50% 50%);
-  transform: scale(1.2);
-  transition: clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), opacity 3s ease, transform 3s ease;
 }
 section.home-section-3.is-inview::before {
   opacity: 1;
