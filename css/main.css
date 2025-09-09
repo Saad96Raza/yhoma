@@ -1203,7 +1203,6 @@ html::-webkit-scrollbar-thumb:hover {
   padding: 0;
   border: 0;
   box-sizing: inherit;
-  -webkit-tap-highlight-color: transparent;
 }
 
 /* Uncomment if custom outline is planned for each element needed */
@@ -1228,8 +1227,6 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: "playfair";
-  color: #504a43;
-  background: #f2eae1;
 }
 
 img,
@@ -1245,13 +1242,18 @@ select {
   font: inherit;
 }
 
+section,
+header,
+footer {
+  background: #f2eae1;
+  color: #504a43;
+}
 section .container,
 header .container,
 footer .container{
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
 @media (min-width: 48rem){
   section .container,
 header .container,
