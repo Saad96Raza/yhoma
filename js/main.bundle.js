@@ -38255,7 +38255,6 @@ var App = /*#__PURE__*/ function() {
                     });
                 };
                 _barba_core__WEBPACK_IMPORTED_MODULE_2___default().init({
-                    debug: true,
                     preventRunning: true,
                     transitions: [
                         {
@@ -38292,12 +38291,14 @@ var App = /*#__PURE__*/ function() {
                 this.preloader = gsap__WEBPACK_IMPORTED_MODULE_9__["default"].timeline({
                     repeat: -1,
                     paused: true
-                }).to(that.title, {
+                });
+                this.preloader.to(that.title, {
                     y: 0,
                     duration: 1,
                     ease: 'expo.out',
                     stagger: 0.1
-                }).to(that.title, {
+                });
+                this.preloader.to(that.title, {
                     y: '-100%',
                     duration: 1,
                     ease: 'circ.easeInOut',
