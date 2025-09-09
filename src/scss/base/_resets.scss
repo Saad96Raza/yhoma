@@ -37,7 +37,7 @@ html {
     padding: 0;
     border: 0;
     box-sizing: inherit;
-    -webkit-tap-highlight-color: transparent;
+
 }
 
 /* Uncomment if custom outline is planned for each element needed */
@@ -63,7 +63,8 @@ body {
     min-height: 100vh;
     // text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-family: $font-playfair;
+    font-family: $font-playfair; 
+
 }
 
 img,
@@ -87,8 +88,17 @@ footer{
     .container{
         @apply px-[2rem] md:px-[13.125rem];
     }
-    
+    svg{
+        display: inline-block;
+        margin:  rem(-1) 0;
+    }
+    background: ss-var($colors,primary,'primary2');
+    color: ss-var($colors,primary,'primary3');
+
 }
+
+
+
 
 p,
 span{

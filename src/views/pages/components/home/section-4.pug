@@ -3,7 +3,9 @@ include ../../mixins/block-reveal-title.pug
 include ../../mixins/fade-text.pug
 
 
-section(class="section home-section-4")
+section(class="section home-section-4" )
+   
+
         div(class="flex flex-col gap-[3rem]  py-[5rem]")
             +FTEXT(
                 'Locations'
@@ -11,45 +13,48 @@ section(class="section home-section-4")
             +BLOCKREVEAL(
                 'Henley Beach',
                 'h2',
-                'block-reveal-title',
                 'lg-font'
             )
-        div(class="content")    
-                div(class="grid grid-cols-1 md:grid-cols-[40%_auto]")
-                    div(class="p-[2rem] md:p-[13.125rem]  order-2 md:order-1  flex flex-col gap-[4rem]")
-                        div(class="flex flex-col gap-[2rem]")
-                            h3(class="md-font") Henley Hills Airbnb
+  
+        div(class="content")
+            div(class="grid grid-cols-1 md:grid-cols-[40%_auto]")
+                div(class="p-[2rem] md:p-[13.125rem]  order-2 md:order-1  flex flex-col gap-[4rem]")
+                    div(class="flex flex-col gap-[2rem]")
+                        h3(class="md-font") Henley Hills Airbnb
+                        p(class="body-font") 
+                            |Located just 30 minutes from the City Airport, Mabel Estate is close
+                            |to some of South Australia’s most popular attractions. Discover a world of
+                            |art and crafts, sumptuous food, wine and boutique beers, amazing wildlife,
+                            |spectacular walking and bike trails, iconic history – and so much more!
+                    div(class="flex")
+                        +CTA("thing to do")      
+                div(class="flex order-1 md:order-2 relative overflow-hidden")
+                        img(src="./media/banner/bg-2.png", class="w-full h-full" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical" alt="")
+
+                div(class="flex order-3 overflow-hidden")
+                    img(src="./media/banner/bg-1.jpg", class="w-full h-full" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical" alt="")
+                div(class="flex flex-col gap-[4rem] order-4")            
+                    div(class="p-[2rem] md:p-[13.125rem] flex flex-col gap-[4rem]")
+                        div(class="flex flex-col gap-[2rem]") 
+                            h3(class="md-font") Plan your Stay
                             p(class="body-font") 
                                 |Located just 30 minutes from the City Airport, Mabel Estate is close
                                 |to some of South Australia’s most popular attractions. Discover a world of
                                 |art and crafts, sumptuous food, wine and boutique beers, amazing wildlife,
                                 |spectacular walking and bike trails, iconic history – and so much more!
+                            ul(class="list-disc")
+                                li(class="body-font")  CBD            
+                                li(class="body-font")  Bridgewater Hotel            
+                                li(class="body-font")  Summit and Botanic Gardens
+                                li(class="body-font")  Wildlife Park          
+                                li(class="body-font")  Chocolate Factory
+                                li(class="body-font")  Historic Town
+                                li(class="body-font")  Markets
                         div(class="flex")
-                            +CTA("thing to do")      
-                    div(class="flex order-1 md:order-2 relative overflow-hidden")
-                            img(src="./media/banner/bg-2.png", class="w-full h-full" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical" alt="")
+                            +CTA("thing to do")  
+    
+        svg(viewBox="0 0 1440 320" width="100%" height="150" preserveAspectRatio="none")
+            path(d="M0,128L80,154.7C160,181,320,235,480,266.7C640,299,800,309,960,272C1120,235,1280,149,1360,106.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z")
 
-                    div(class="flex order-3 overflow-hidden")
-                        img(src="./media/banner/bg-1.jpg", class="w-full h-full" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical" alt="")
-                    div(class="flex flex-col gap-[4rem] order-4")            
-                        div(class="p-[2rem] md:p-[13.125rem] flex flex-col gap-[4rem]")
-                            div(class="flex flex-col gap-[2rem]") 
-                                h3(class="md-font") Plan your Stay
-                                p(class="body-font") 
-                                    |Located just 30 minutes from the City Airport, Mabel Estate is close
-                                    |to some of South Australia’s most popular attractions. Discover a world of
-                                    |art and crafts, sumptuous food, wine and boutique beers, amazing wildlife,
-                                    |spectacular walking and bike trails, iconic history – and so much more!
-                                ul(class="list-disc")
-                                    li(class="body-font")  CBD            
-                                    li(class="body-font")  Bridgewater Hotel            
-                                    li(class="body-font")  Summit and Botanic Gardens
-                                    li(class="body-font")  Wildlife Park          
-                                    li(class="body-font")  Chocolate Factory
-                                    li(class="body-font")  Historic Town
-                                    li(class="body-font")  Markets
-                            div(class="flex")
-                                +CTA("thing to do")  
-        
 
 

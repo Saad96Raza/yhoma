@@ -4,29 +4,16 @@
 /* Cards */
 
 .card-2{
-    .lg-font{
-        font-family: $font-Mclassic;
-    }
-    background: ss-var($colors , neutral ,'white');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 48%;
-    border-top-right-radius: 48%;
-    padding: rem(120) rem(60);
+    
+
+    @extend %card;
+
     z-index: 1;
+    @extend %center;
 }
 
 .card-1{
-    background: ss-var($colors , neutral ,'white');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 48%;
-    border-top-right-radius: 48%;
-    @apply py-[7.5rem] px-[1rem] md:px-[4.75rem];
-
-
+   
+    @extend %center;
+    @extend %card;
 }

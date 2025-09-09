@@ -34,34 +34,30 @@ section{
                 }
             }
         }
-    }
     .navigation {
         display: flex;
         vertical-align: middle;
         height: 100%;
 
-        /* Shared styles for prev/next */
         .prev,
         .next {
-            font-size: 3em;
-            display: inline-block;
-            width: 5em;
-            height: 5em;
-            position: relative;
-            overflow: hidden;
-            margin: auto  rem(-60);
-
-
+                font-size: 3em;
+                display: inline-block;
+                width: 5em;
+                height: 5em;
+                position: relative;
+                overflow: hidden;
+                margin: 0  rem(-60);
             &::before,
             &::after {
-            content: "";
-            position: absolute;
-            left: 25%;
-            right: 25%;
-            top: 50%;
-            height: rem(2);
-            background-color: ss-var($colors,primary,'primary1');
-            transition: background-color 0.2s ease-out;
+                content: "";
+                position: absolute;
+                left: 25%;
+                right: 25%;
+                top: 50%;
+                height: rem(2);
+                background-color: ss-var($colors,primary,'primary1');
+                transition: background-color 0.2s ease-out;
             }
 
             &:hover {
@@ -95,5 +91,19 @@ section{
             transform: rotate(-45deg);
             }
         }
+    }
+    }
+   
+
+   
+    &.portfolio-section-6{
+        .swiper{
+            .navigation{
+            .prev,
+            .next{
+                margin:auto rem(-60)
+            }
         }
+        }
+    }
 }

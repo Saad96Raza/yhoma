@@ -12,8 +12,10 @@ $font-icon: 'iconmoon';
 $font-playfair: 'playfair';
 $font-Mclassic: 'Mclassic';
 $font-aveline: 'Aveline';
+$font-spark: 'mabdy';
+$font-cinzel: 'cinzel';
 
-$nav-link:1.6rem;
+$nav-link:1.8rem;
 
 
 
@@ -38,8 +40,9 @@ $colors: (
     // Main colors
     primary:
         (
-            "primary1": #756762,
-            "primary2": #dbdbd9,
+            "primary1": #bd8e6b,
+            "primary2": #f2eae1,
+            "primary3": #504a43,
         ),
     // Secondary colors
     secondary:
@@ -56,7 +59,7 @@ $colors: (
     // Grayscale/Basic colors
     neutral:
         (
-            "black": #393939,
+            "black": #000000,
             "darkgray": #343434,
             "gray": #c8c8c8,
             "lightgray": #f7f7f7,

@@ -211,16 +211,39 @@
   height: auto;
   padding: #{$py}px #{$px}px;
   position: relative;
-  color: ss-var($colors, neutral, "black");
+  background: ss-var($colors, primary, "primary1");
+
+  color: ss-var($colors, neutral, "white");
   text-decoration: none;
   transition: all ease 0.3s;
-  border: rem(3) solid ss-var($colors, neutral, "black");
+  border: rem(3) solid ss-var($colors, primary, "primary1");
   display: flex;
 
   &:hover {
-    background: ss-var($colors, neutral, "black");
-    color: ss-var($colors, neutral, "white");
+    background: transparent;
+    color: ss-var($colors, neutral, "black");
     transition: all ease 0.3s;
     text-decoration: none;
+  }
+}
+
+
+@mixin reveal-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transform: scale(1.2); 
+  transition: 
+    clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), 
+    opacity 3s ease,
+    transform 3s ease;
+
+  &.is-inview {
+    opacity: 1;
+    clip-path: circle(150% at 50% 50%);
+    transform: scale(1);
   }
 }

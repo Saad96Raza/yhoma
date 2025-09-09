@@ -6,8 +6,13 @@ head
   title #{htmlWebpackPlugin.options.title}
 body(data-barba="wrapper")
   div(class="smooth-scroll")
+    section(class="preloader")
+      h2(data-splitting="chars" class="preloader-title") yhoma
     include  ../../src/views/partials/header.pug
-    main(data-barba="container")
-        block content
+    block namespace
+      - var name = "default"
+    main(data-barba="container" data-barba-namespace=name)
+      block content
+
     include  ../../src/views/partials/footer.pug
 

@@ -4,25 +4,35 @@
 /* Header */
 
 .annoucment-header{
-    background: ss-var($colors,primary,'primary1');
+    @extend %gradient-bg;
+    
 }
-header{
-
-        
+header{      
     .pure-toggle-label{
         position: absolute;
-        transform: translate( -50% , -50%);
+        transform: translate(-50% , -50%);
         width: 0;
         height: 0;
-    
+    }
+    .nav{
+        ul{
+            li{
+                a{
+                    &:hover{
+                        color: ss-var($colors,primary,'primary1');
+                    }
+                }
+            }
+        }
     }
 }
 .offcanvas{
     .pure-drawer{
-        z-index: 999;
         background: ss-var($colors,primary,'primary2');
         li a{
             text-decoration: none;
+            font-family: $font-Mclassic; 
+
             &:hover{
                 text-decoration: none;
 

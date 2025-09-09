@@ -12,12 +12,16 @@
   overflow: hidden;
   color: ss-var($colors,neutral,'gray');
 
-  padding: rem(20) 0;
+  padding-bottom: rem(10);
+  padding-top: rem(30);
   input {
     width: 100%;
     height: 100%;
-    color: ss-var($colors,neutral,'gray');
-    padding-top: rem(20);
+    color: ss-var($colors,primary,'primary3');
+    background: transparent;
+
+    @extend %font-link;
+    font-family: $font-raleway;
     border: none;
 
     &:focus {
@@ -29,7 +33,7 @@
       transform: translateY(-100%);
       font-size: rem(18);
       left: 0;
-      color:  ss-var($colors,neutral,'black');
+      color:  ss-var($colors,neutral,'gray');
     }
 
     &:focus + .label-name::after,
@@ -55,7 +59,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-bottom: rem(2) solid ss-var($colors,neutral,'black');
+      border-bottom: rem(3) solid ss-var($colors,primary,'primary1');
+  
       transform: translateX(-100%);
       transition: all 0.3s ease;
     }
@@ -65,7 +70,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-bottom: rem(5);
+    padding-bottom: rem(20);
     transition: all 0.3s ease;
   }
 }

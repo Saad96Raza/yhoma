@@ -18,11 +18,9 @@ header{
     overflow: hidden;
 
     .link-container {
-      transition: transform 0.4s ease;
+      transition: transform 0.6s ease;
       transform: translateY(0);
 
-      /* both .title and .link-font (your markup uses both) */
-         // apply to both title and link-font
       .link-font {
         display: block;
         line-height: $nav-link;

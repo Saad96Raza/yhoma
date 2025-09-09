@@ -51,69 +51,60 @@
 
 
 .link-font{
-  @apply  
-  no-underline
-  capitalize;
-  font-family: $font-playfair; 
-  font-size: $nav-link;   
+    @extend %font-link;
 }
 .link-font:hover{
      @apply no-underline;
 }
 
 .xxl-font{
-    @apply text-[4rem] 
-    md:text-[8rem];
-    color: ss-var($colors,neutral,'white');
-    mix-blend-mode: difference;
-    font-family: $font-Mclassic; 
+   @extend %xxl-font;
+    span{
+        @extend %xxl-font;
+    }
 }
 
 .xl-font,
 .lg-font {
-    @apply  text-[3rem]
-    md:text-[5rem]
-    uppercase
-    leading-[1.2];
-    font-family: $font-Mclassic; 
+    @extend %font-xl;
+    span{
+       @extend %font-xl;
+    }
 }
 
 .md-font{
     @apply 
     text-[3rem]
     font-medium
+    font-thin
+    leading-none
     capitalize;
-    font-family: $font-Mclassic;  
+    font-family: $font-spark;
 }
 
 .sm-font {
-    @apply text-[3.5rem] md:text-[5.5rem]
+    @apply text-[3.5rem]
     italic 
     leading-none;    
     font-family: $font-aveline; 
 }
 
 .body-font {
-    @apply text-[1.4rem] md:text-[2rem]
-    font-extralight
-    capitalize
-    tracking-normal;
-    font-family: $font-raleway;
-     span{
-        @apply text-[1.4rem]
-        lowercase
-        tracking-normal
-        md:text-[2rem];
+   @extend %font-body;
+     .word{
+        .char{
+            @extend %font-body;
+        }
     }  
 }
 
-
-
 .highlight-font,
 .field-font {
-   color: ss-var($colors,neutral,'white') 
+    color:  ss-var($colors,primary,'primary2');
+
 }
 
 .direction {
+    color: ss-var($colors,neutral,'white') 
 }
 

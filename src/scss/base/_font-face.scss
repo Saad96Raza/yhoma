@@ -30,6 +30,9 @@
 
 @include font-face($font-playfair, "../fonts/playfair/playfair-display.regular", 100, "normal", ttf);
 
-@include font-face($font-aveline, "../fonts/aveline/Avelline", 100, "normal", ttf otf);
+@include font-face($font-aveline, "../fonts/aveline/wedding", 100, "normal", ttf);
 
+@include font-face($font-spark, "../fonts/mabdy/spark", 100, "normal", ttf);
+
+@include font-face($font-cinzel, "../fonts/cinzel/cinzel", 100, "normal", ttf);
 

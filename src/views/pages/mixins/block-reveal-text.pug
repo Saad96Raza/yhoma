@@ -1,13 +1,7 @@
                 
-mixin BRTEXT(title,tag,classParent="")
-    - var letter = title.split('')
-    
-    
-    p(class="text-center body-font max-w-[70ch]"+" "+classParent data-scroll data-scroll-class="is-inview")
-        - for(let i = 0; i < letter.length;i++)
-            if letter[i] === ' '
-                span &nbsp;
-            span(class="" style=`transition-delay:${i*0.0040}s;`) #{letter[i]}        
+mixin BRTEXT(title,classParent="")
+    p(data-splitting="words" class="text-center animation-block body-font max-w-[70ch]"+" "+classParent data-scroll data-scroll-class="is-inview") #{title}
+             
                 
                 
                 

@@ -1,4 +1,8 @@
 // Mainly to make images as a circle
+// Abstracts
+@use "variables" as *;
+@use 'functions' as *;
+
 %circle {
     border-radius: 50%;
 }
@@ -7,4 +11,72 @@
 %no-appearance {
     -webkit-appearance: none;
     appearance: none;
+}
+
+%center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%xxl-font{
+    @apply text-[4rem] 
+    font-thin
+    md:text-[8rem]
+    leading-[1.5];
+    color: ss-var($colors,primary,'primary2');
+    font-family: $font-cinzel; 
+}
+
+%font-xl {
+    @apply  text-[4rem]
+    md:text-[6rem]
+    uppercase
+    font-thin
+    leading-none
+    tracking-[-0.2rem];
+    font-family: $font-cinzel;
+}
+%font-body{
+    @apply text-[1.4rem] md:text-[2rem]
+    capitalize
+    tracking-normal;
+    font-family: $font-raleway;
+}
+
+%font-link{
+  @apply  
+  no-underline
+  capitalize;
+  font-family: $font-cinzel; 
+  font-size: $nav-link;   
+}
+
+
+%gradient-bg{
+   background:  ss-var($colors,primary,'primary1');
+}
+%wave-bg{
+    fill:ss-var($colors,primary,'primary1')
+}
+
+%card{
+    background: ss-var($colors,neutral,'white');
+    flex-direction: column;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    @apply py-[5.5rem] md:py-[7.5rem] px-[1rem] md:px-[4.75rem];
+}
+
+%clip-path{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    clip-path: circle(0% at 50% 50%);
+    transform: scale(1.2); // slight zoom for cinematic effect
+    transition: 
+    clip-path 3s cubic-bezier(0.77, 0, 0.175, 1), // smooth easing
+    opacity 3s ease,
+    transform 3s ease;
 }
