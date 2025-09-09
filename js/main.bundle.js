@@ -38227,7 +38227,7 @@ var App = /*#__PURE__*/ function() {
         };
         this.createLocomotiveScroll();
         this.createLettersComponents();
-        // this.createPreloader()
+        this.createPreloader();
         this.createAjaxNavigation();
         this.createNavbar();
         this.createReRender();
@@ -38255,6 +38255,8 @@ var App = /*#__PURE__*/ function() {
                     });
                 };
                 _barba_core__WEBPACK_IMPORTED_MODULE_2___default().init({
+                    debug: true,
+                    preventRunning: true,
                     transitions: [
                         {
                             once: function once(param) {
@@ -38308,7 +38310,7 @@ var App = /*#__PURE__*/ function() {
             key: "onLoad",
             value: function onLoad() {
                 var _this = this;
-                this.preloader.repeat(0).play();
+                this.preloader.repeat(0);
                 this.preloader.to(this.height, {
                     height: 0,
                     duration: 1,
@@ -38338,7 +38340,7 @@ var App = /*#__PURE__*/ function() {
                     multiplier: 1.4,
                     smoothMobile: false
                 });
-            // this.locomotiveScroll.stop()
+                this.locomotiveScroll.stop();
             }
         },
         {
@@ -38365,7 +38367,7 @@ var App = /*#__PURE__*/ function() {
                         _this.toggle.checked = !_this.toggle.checked;
                     }
                 });
-            // window.addEventListener('load',this.onLoad.bind(this))
+                window.addEventListener('load', this.onLoad.bind(this));
             }
         }
     ]);
