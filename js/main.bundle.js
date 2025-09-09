@@ -38355,6 +38355,7 @@ var App = /*#__PURE__*/ function() {
                     _this.pages.home.createReRender();
                     _this.pages.portfolio.createReRender();
                     _this.locomotiveScroll.init();
+                    _this.createLettersComponents();
                 });
             }
         },

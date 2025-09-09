@@ -720,7 +720,7 @@ section.home-section-3, section.preloader, .card-2, .card-1 {
 section.home-section-5 .xxl-font, section.preloader h2 .word .char, .xxl-font, .xxl-font span{
   font-size: 4rem;
   font-weight: 100;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 @media (min-width: 48rem){
@@ -730,7 +730,7 @@ section.home-section-5 .xxl-font, section.preloader h2 .word .char, .xxl-font, .
 }
 
 section.home-section-5 .xxl-font, section.preloader h2 .word .char, .xxl-font, .xxl-font span {
-  color: #f2eae1;
+  color: #96634b;
   font-family: "cinzel";
 }
 
@@ -782,15 +782,19 @@ section.home-section-5 .xxl-font, section.preloader h2 .word .char, .xxl-font, .
 }
 
 .annoucment-header {
-  background: #bd8e6b;
+  background: #96634b;
+}
+
+section.contact-section-1::before, section.home-section-5::before {
+  background: linear-gradient(to bottom, #f6f6f6 20%, rgba(246, 246, 246, 0.8) 47%, #f6f6f6 90%);
 }
 
 section.home-section-1 .shape-divider path, section.home-section-2 svg path, section.home-section-4 svg path, section.home-section-5 svg {
-  fill: #bd8e6b;
+  fill: #96634b;
 }
 
 .card-2, .card-1 {
-  background: #ffffff;
+  background: #f6f6f6;
   flex-direction: column;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
@@ -807,6 +811,13 @@ section.home-section-1 .shape-divider path, section.home-section-2 svg path, sec
     padding-left: 4.75rem;
     padding-right: 4.75rem;
   }
+}
+
+.card-2, .card-1 {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(0.3125rem);
+          backdrop-filter: blur(0.3125rem);
+  border: 0.0625rem solid #f2eae1;
 }
 
 section.home-section-3::before, .reveal-bg {
@@ -1246,7 +1257,7 @@ section,
 header,
 footer {
   background: #f2eae1;
-  color: #504a43;
+  color: #96634b;
 }
 section .container,
 header .container,
@@ -1716,16 +1727,16 @@ a.underline-text:hover {
   height: auto;
   padding: 20px 30px;
   position: relative;
-  background: #bd8e6b;
+  background: #96634b;
   color: #ffffff;
   text-decoration: none;
   transition: all ease 0.3s;
-  border: 0.1875rem solid #bd8e6b;
+  border: 0.1875rem solid #96634b;
   display: flex;
 }
 .call-to-action:hover {
   background: transparent;
-  color: #000000;
+  color: #96634b;
   transition: all ease 0.3s;
   text-decoration: none;
 }
@@ -1736,16 +1747,16 @@ a.underline-text:hover {
   height: auto;
   padding: 20px 60px;
   position: relative;
-  background: #bd8e6b;
+  background: #96634b;
   color: #ffffff;
   text-decoration: none;
   transition: all ease 0.3s;
-  border: 0.1875rem solid #bd8e6b;
+  border: 0.1875rem solid #96634b;
   display: flex;
 }
 .call-to-action-card:hover {
   background: transparent;
-  color: #000000;
+  color: #96634b;
   transition: all ease 0.3s;
   text-decoration: none;
 }
@@ -1801,7 +1812,7 @@ a.underline-text:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  border-bottom: 0.1875rem solid #bd8e6b;
+  border-bottom: 0.1875rem solid #96634b;
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -1861,7 +1872,7 @@ header .link-reveal:hover .link-mask .link-container .link-title-2 {
 
 /* Preloader */
 section.preloader {
-  background: #000000;
+  background: #96634b;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -1873,6 +1884,7 @@ section.preloader h2 {
 section.preloader h2 .word .char {
   transform: translateY(100%);
   text-transform: capitalize;
+  color: #f6f6f6;
 }
 
 /* Custom checkboxes */ /* Hamburger */
@@ -2134,7 +2146,7 @@ section.section .navigation .next::after {
   right: 25%;
   top: 50%;
   height: 0.125rem;
-  background-color: #bd8e6b;
+  background-color: #96634b;
   transition: background-color 0.2s ease-out;
 }
 section.section .navigation .prev:hover::before, section.section .navigation .prev:hover::after,
@@ -2171,7 +2183,7 @@ header .pure-toggle-label {
   height: 0;
 }
 header .nav ul li a:hover {
-  color: #bd8e6b;
+  color: #96634b;
 }
 
 .offcanvas .pure-drawer {
@@ -2187,7 +2199,7 @@ header .nav ul li a:hover {
 
 /* Navigation */ /* Sidebar */ /* Footer */
 footer {
-  background: #bd8e6b;
+  background: #96634b;
 }
 
 /* ======== */
@@ -2201,12 +2213,18 @@ section.home-section-1 .shape-divider {
   z-index: 3;
   overflow: hidden;
 }
+section.home-section-2 {
+  background: #f2eae1;
+}
 section.home-section-3 {
   position: relative;
   overflow: hidden;
 }
 section.home-section-3 .container {
   z-index: 3;
+}
+section.home-section-3 .container .xxl-font .char {
+  color: #f6f6f6;
 }
 section.home-section-3::before {
   content: "";
@@ -2238,9 +2256,6 @@ section.home-section-5 {
   position: relative;
   background: url(../media/bg-3.jpg) no-repeat center/cover;
 }
-section.home-section-5 .xxl-font span {
-  color: #000000;
-}
 section.home-section-5 svg {
   position: relative;
   z-index: 3;
@@ -2253,7 +2268,6 @@ section.home-section-5::before {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to bottom, rgb(242, 234, 225) 20%, rgba(242, 234, 225, 0.8) 47%, rgb(242, 234, 225) 90%);
 }
 section.home-section-6 {
   position: relative;
@@ -2262,9 +2276,16 @@ section.home-section-6 {
 /* CONTACT  CSS */
 /* ======== */
 section.contact-section-1 {
-  position: relative;
   background: url(../media/bg-3.jpg) no-repeat center/cover;
   background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+section.contact-section-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 section.contact-section-2 {
   background: #f2eae1;
@@ -2273,7 +2294,7 @@ section.contact-section-3 .grid .left .body-font {
   color: #ffffff;
 }
 section.contact-section-3 .grid .left:nth-child(1) {
-  background: #bd8e6b;
+  background: #96634b;
 }
 
 /* ======== */
@@ -2312,7 +2333,7 @@ section.portfolio-section-3 .grid .feature {
   padding: 7.5rem 2.5rem;
 }
 section.portfolio-section-3 .grid .feature:nth-child(odd) {
-  background: #bd8e6b;
+  background: #96634b;
 }
 section.portfolio-section-3 .grid .feature:nth-child(even) {
   background: #f2eae1;
@@ -5977,12 +5998,6 @@ video {
 /* Main DAISYUI DECORATIVES */
 /* ======== */
 @plugin "daisyui";
-@media (min-width: 40rem){
-  .sm\:w-fit{
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
 @media (min-width: 48rem){
   .md\:order-1{
     order: 1;
