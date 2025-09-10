@@ -789,7 +789,7 @@ section.contact-section-1::before, section.home-section-5::before {
   background: linear-gradient(to bottom, #f6f6f6 20%, rgba(246, 246, 246, 0.8) 47%, #f6f6f6 90%);
 }
 
-section.home-section-1 .shape-divider path, section.home-section-2 svg path, section.home-section-4 svg path, section.home-section-5 svg {
+section.portfolio-section-1 .shape-divider path, section.portfolio-section-2 svg path, section.home-section-1 .shape-divider path, section.home-section-2 svg path, section.home-section-4 svg path, section.home-section-5 svg {
   fill: #96634b;
 }
 
@@ -2330,52 +2330,65 @@ section.about-section-4 {
 section.portfolio-section-1 {
   background: #f2eae1;
 }
-section.portfolio-section-1 .shape-divider path {
-  fill-opacity: 1;
-  fill: #ffffff;
-}
 section.portfolio-section-2 .left {
-  background: #f2eae1;
+  background: #96634b;
+  color: #f6f6f6;
+}
+section.portfolio-section-2 .right {
+  position: relative;
+  overflow: hidden;
+}
+section.portfolio-section-2 .right img {
+  position: absolute;
+  inset: 0;
 }
 section.portfolio-section-3 .grid .feature {
   padding: 7.5rem 2.5rem;
 }
 section.portfolio-section-3 .grid .feature:nth-child(odd) {
   background: #96634b;
+  color: #f6f6f6;
 }
 section.portfolio-section-3 .grid .feature:nth-child(even) {
-  background: #f2eae1;
+  background: #f6f6f6;
 }
 section.portfolio-section-3 .grid .feature img {
   width: 6.25rem;
   height: auto;
 }
+section.portfolio-section-4 {
+  background: #f6f6f6;
+}
+section.portfolio-section-4 svg path {
+  fill: #f2eae1;
+}
 section.portfolio-section-4 .content {
   background: #f2eae1;
 }
 section.portfolio-section-4 .content .grid .white {
-  background: #ffffff;
+  background: #f6f6f6;
 }
-section.portfolio-section-4 .content svg path {
-  fill: #ffffff;
+section.portfolio-section-4 .content svg:nth-of-type(1) path {
+  fill: #f6f6f6;
+}
+section.portfolio-section-4 .content svg:nth-of-type(2) path {
+  fill: #f6f6f6;
 }
 section.portfolio-section-5 {
   background: #f2eae1;
 }
-section.portfolio-section-5 svg {
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 section.portfolio-section-5 svg path {
-  fill: #ffffff;
+  fill: #f6f6f6;
 }
 section.portfolio-section-5 .feature img {
   width: 6.25rem;
   height: auto;
 }
-section.portfolio-section-7 {
-  background: #f2eae1;
+section.portfolio-section-6 {
+  background: #f6f6f6;
+}
+section.portfolio-section-8 {
+  background: #f6f6f6;
 }
 
 /* ======== */
@@ -6283,6 +6296,12 @@ video {
 .hidden{
   display: none;
 }
+.h-\[10rem\]{
+  height: 10rem;
+}
+.h-\[15rem\]{
+  height: 15rem;
+}
 .h-\[31\.25rem\]{
   height: 31.25rem;
 }
@@ -6303,8 +6322,8 @@ video {
 .w-full{
   width: 100%;
 }
-.max-w-\[13ch\]{
-  max-width: 13ch;
+.max-w-\[12ch\]{
+  max-width: 12ch;
 }
 .max-w-\[20ch\]{
   max-width: 20ch;
@@ -6408,9 +6427,6 @@ video {
 .pb-\[10rem\]{
   padding-bottom: 10rem;
 }
-.pt-\[10rem\]{
-  padding-top: 10rem;
-}
 .pt-\[4rem\]{
   padding-top: 4rem;
 }
@@ -6451,6 +6467,12 @@ video {
   }
   .md\:h-\[10rem\]{
     height: 10rem;
+  }
+  .md\:h-\[20rem\]{
+    height: 20rem;
+  }
+  .md\:h-\[30rem\]{
+    height: 30rem;
   }
   .md\:h-\[60rem\]{
     height: 60rem;
