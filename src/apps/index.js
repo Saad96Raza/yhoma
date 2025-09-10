@@ -13,8 +13,6 @@ import { toArray } from 'lodash';
 
 class App{
     constructor(){
-
-     
         this.pages = {
             home : new Home(),
             portfolio : new Portfolio()
@@ -48,7 +46,6 @@ class App{
         }
 
        barba.init({
-                debug: true,
                 preventRunning: true,
                 transitions: [
                 {
@@ -71,7 +68,6 @@ class App{
 
     createLettersComponents(){
         this.splitting = Splitting()
-
     }
 
     createPreloader(){
@@ -81,19 +77,19 @@ class App{
         this.height = document.querySelector('.preloader')
 
         this.preloader = GSAP.timeline({repeat:-1,paused:true})
-            .to(that.title, {
-                y: 0,                 
-                duration: 1,
-                ease: 'expo.out',
-                stagger: 0.1,
-            })
-            .to(that.title, {
-                y: '-100%',                 
-                duration: 1,
-                ease: 'circ.easeInOut',
-                stagger: 0.1,
+        this.preloader.to(that.title, {
+            y: 0,                 
+            duration: 1,
+            ease: 'expo.out',
+            stagger: 0.1,
+        })
+        this.preloader.to(that.title, {
+            y: '-100%',                 
+            duration: 1,
+            ease: 'circ.easeInOut',
+            stagger: 0.1,
 
-            })
+        })
 
         this.preloader.play()
     }
@@ -140,6 +136,7 @@ class App{
             this.pages.home.createReRender() 
             this.pages.portfolio.createReRender() 
             this.locomotiveScroll.init()
+            this.createLettersComponents()
         })
     }
     addEventListeners(){

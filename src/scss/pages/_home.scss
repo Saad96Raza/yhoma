@@ -24,6 +24,7 @@ section{
         }
     }
     &.home-section-2{
+        background:ss-var($colors,'primary','primary2');
         svg{
             path{
                 @extend %wave-bg;
@@ -32,22 +33,19 @@ section{
 
     }
     &.home-section-3{
-        @extend %center;
-
         position: relative;
         overflow: hidden;
-
-         &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-          
-            url('../media/banner/bg-1.jpg') no-repeat center center;
-            background-size: cover;
-            z-index: -1; 
-            @extend %clip-path;
+        .container{
+            z-index: 3;
+            .xxl-font{
+                .char{
+                    color: ss-var($colors,'primary','primary4');
+                }
+            }
         }
+        @extend %center;
+
+     
 
         &.is-inview::before {
             opacity: 1;
@@ -56,14 +54,7 @@ section{
         }
 
     svg{
-        position: absolute;
-        &:nth-of-type(1) {
-            top: 0;
-        }
-
-        &:nth-of-type(2) {
-            bottom: 0;
-        }
+        z-index: 2; 
         path{
             fill: ss-var($colors,'primary','primary2');
         }
@@ -82,9 +73,6 @@ section{
         background: url('../media/banner/bg-3.jpg') no-repeat center/cover;
         .xxl-font{
             @extend %xxl-font;
-            span{
-                color: ss-var($colors,neutral,'black');
-            }
         }
         svg {
             position: relative;   
@@ -100,7 +88,7 @@ section{
             position: absolute;
             inset: 0; 
             z-index: 1;
-            background: linear-gradient(to bottom, rgb(242, 234, 225) 20%, rgba(242, 234, 225, 0.8) 47%, rgb(242, 234, 225) 90%)
+            @extend %gadinet-bg;
          }
 
 
@@ -109,7 +97,6 @@ section{
     &.home-section-6{
         position: relative;  
     }
-    &.home-section-7{
-    }
+   
     
 }

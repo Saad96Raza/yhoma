@@ -1,0 +1,30 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Tabs */
+
+section{
+   &.home-section-5{
+     .tabs {
+        .tab {
+            @apply px-[6rem] py-[2.5rem] leading-none;
+            position: relative;
+            background: ss-var($colors,primary,'primary1');
+            color: ss-var($colors,primary,'primary4');
+            transition: all ease 0.5s;
+            @extend %font-body;
+            border-radius: 0;
+            width: auto;
+            height: auto;
+            font-family: $font-cinzel;
+                
+            &:checked {
+                color:ss-var($colors,primary,'primary1');
+                background-color:transparent;
+                border: rem(3) solid ss-var($colors,primary,'primary1');
+            }
+        }
+    }
+   }
+}
+
