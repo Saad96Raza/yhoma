@@ -794,7 +794,7 @@ section.home-section-5 .tabs .tab, .body-font, .body-font .word, .body-font .wor
   background: #96634b;
 }
 
-section.contact-section-1::before, section.home-section-5::before {
+section.home-section-5::before {
   background: linear-gradient(to bottom, #f6f6f6 20%, rgba(246, 246, 246, 0.8) 47%, #f6f6f6 90%);
 }
 
@@ -2317,6 +2317,7 @@ section.contact-section-1::before {
   content: "";
   position: absolute;
   inset: 0;
+  background: linear-gradient(to bottom, #f2eae1 20%, rgba(242, 234, 225, 0.8) 47%, #f2eae1 90%);
   z-index: -1;
 }
 section.contact-section-2 {
