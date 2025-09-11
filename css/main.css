@@ -805,8 +805,8 @@ section.portfolio-section-1 .shape-divider path, section.portfolio-section-2 svg
 .card-2, .card-1 {
   background: #f6f6f6;
   flex-direction: column;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-top-left-radius: 25rem;
+  border-top-right-radius: 25rem;
   padding-top: 5.5rem;
   padding-bottom: 5.5rem;
   padding-left: 1rem;
@@ -1279,6 +1279,33 @@ header svg,
 footer svg {
   display: inline-block;
   margin: -0.0625rem 0;
+}
+section .shape-img,
+header .shape-img,
+footer .shape-img{
+  padding: 0px;
+}
+@media (min-width: 48rem){
+  section .shape-img,
+header .shape-img,
+footer .shape-img{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+section .shape-img img,
+header .shape-img img,
+footer .shape-img img {
+  border-top-left-radius: 17.5rem;
+  border-top-right-radius: 17.5rem;
+  margin: 0px;
+}
+@media (min-width: 48rem){
+  section .shape-img img,
+header .shape-img img,
+footer .shape-img img{
+    margin-left: 60%;
+  }
 }
 
 p,
@@ -2227,25 +2254,6 @@ footer {
 /* ======== */
 /* Home CSS */
 /* ======== */
-section.home-section-1 .container .grid .shape-img{
-  padding: 0px;
-}
-@media (min-width: 48rem){
-  section.home-section-1 .container .grid .shape-img{
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-section.home-section-1 .container .grid .shape-img img {
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  margin: 0px;
-}
-@media (min-width: 48rem){
-  section.home-section-1 .container .grid .shape-img img{
-    margin-left: 65%;
-  }
-}
 section.home-section-1 .shape-divider {
   position: relative;
   z-index: 3;
@@ -6466,10 +6474,6 @@ video {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
 .py-\[10rem\]{
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -6572,9 +6576,6 @@ video {
   .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .md\:grid-cols-\[35\%_auto\]{
-    grid-template-columns: 35% auto;
-  }
   .md\:grid-cols-\[40\%_auto\]{
     grid-template-columns: 40% auto;
   }
@@ -6614,10 +6615,6 @@ video {
   .md\:py-\[12rem\]{
     padding-top: 12rem;
     padding-bottom: 12rem;
-  }
-  .md\:py-\[5rem\]{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
   .md\:pl-\[18rem\]{
     padding-left: 18rem;
