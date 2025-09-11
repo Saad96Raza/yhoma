@@ -2079,7 +2079,6 @@ section p.animation-block.is-inview .word {
   opacity: 1;
 }
 
-/* 🔹 Background Image Reveal */
 .reveal-bg.is-inview {
   opacity: 1;
   clip-path: circle(150% at 50% 50%);
@@ -6308,6 +6307,12 @@ video {
 .h-\[3rem\]{
   height: 3rem;
 }
+.h-\[50rem\]{
+  height: 50rem;
+}
+.h-auto{
+  height: auto;
+}
 .h-fit{
   height: -moz-fit-content;
   height: fit-content;
@@ -6387,10 +6392,6 @@ video {
 }
 .p-\[2rem\]{
   padding: 2rem;
-}
-.px-0{
-  padding-left: 0px;
-  padding-right: 0px;
 }
 .px-\[2rem\]{
   padding-left: 2rem;
