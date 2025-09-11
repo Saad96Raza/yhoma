@@ -1,7 +1,7 @@
 include ./call-to-action.pug
 
 mixin PCARD(title, paragraph, tag)
-  div(class="card-2  gap-[4rem] fade-in" data-scroll data-scroll-class="is-inview" data-scroll-repeat="true")
+  div(class="card-2 w-full md:w-fit gap-[4rem] fade-in" data-scroll data-scroll-class="is-inview" data-scroll-repeat="true")
     #{tag}(class="lg-font text-center break-words")
       each word, i in title.split(' ')
         | #{word}

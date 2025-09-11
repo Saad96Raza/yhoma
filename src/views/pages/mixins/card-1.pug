@@ -1,7 +1,8 @@
 include ./call-to-action.pug
 
 mixin OCARD(subtitle,title, tag)
-  div(class="card-1  w-full md:w-fit  flex flex-col gap-[3rem] fade-in" data-scroll data-scroll-class="is-inview" data-scroll-repeat="true")
-    p(class="sm-font text-center") #{subtitle}
-    #{tag}(class="lg-font text-center max-w-[13ch] break-words") #{title}
-    +CTA("book now")
+    div(class="card-1  w-full md:w-fit  flex flex-col gap-[3rem] fade-in" data-scroll data-scroll-class="is-inview" data-scroll-repeat="true")
+      p(class="sm-font text-center") #{subtitle}
+      #{tag}(class="lg-font text-center max-w-[12ch]  break-words") #{title}
+
+      +CTA("book now")

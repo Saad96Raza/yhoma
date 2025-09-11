@@ -10,15 +10,27 @@ section{
         background: ss-var($colors,primary,'primary2');
         .shape-divider{
             path{               
-                fill-opacity:1;
-                fill: ss-var($colors,neutral,'white');
+                @extend %wave-bg;
             }
         }
     }
     &.portfolio-section-2{
         .left{
-            background: ss-var($colors,primary,'primary2');
-
+            background: ss-var($colors,primary,'primary1');
+            color: ss-var($colors,primary,'primary4');
+        }
+        .right{
+            position: relative;
+            overflow: hidden;
+            img{
+                position: absolute;
+                inset: 0
+            }
+        }
+        svg{
+            path{               
+                @extend %wave-bg;
+            }
         }
     }
     &.portfolio-section-3{
@@ -27,9 +39,10 @@ section{
                 padding: rem(120) rem(40);
                 &:nth-child(odd) {
                     background: ss-var($colors,primary,'primary1');
+                    color: ss-var($colors,primary,'primary4');
                 }
                 &:nth-child(even) {
-                   background: ss-var($colors,primary,'primary2');
+                   background: ss-var($colors,primary,'primary4');
                 }
                 img{
                     width: rem(100);
@@ -41,16 +54,29 @@ section{
     }
 
     &.portfolio-section-4{
+        background: ss-var($colors,primary,'primary4');
+        svg{
+            path{
+                fill: ss-var($colors,primary,'primary2');
+            }
+        }
         .content{
             background: ss-var($colors,primary,'primary2');
             .grid{
                 .white{
-                    background: ss-var($colors,neutral,'white');
+                    background: ss-var($colors,primary,'primary4');
                 }
             }
             svg{
-                path{
-                    fill:ss-var($colors,neutral,'white');
+                &:nth-of-type(1){
+                    path{
+                        fill: ss-var($colors,primary,'primary4');
+                    }
+                }
+                 &:nth-of-type(2){
+                    path{
+                        fill: ss-var($colors,primary,'primary4');
+                    }
                 }
             }
         }
@@ -58,11 +84,8 @@ section{
     &.portfolio-section-5{
         background: ss-var($colors,primary,'primary2');
         svg{
-            bottom: 0;
-            left: 0;
-            right: 0;
             path{
-                fill: ss-var($colors,neutral,'white');
+                fill: ss-var($colors,primary,'primary4');
             }
         }
         .feature{
@@ -72,8 +95,12 @@ section{
             }
         }
     }
-    &.portfolio-section-7{
-        background: ss-var($colors,primary,'primary2');
+    &.portfolio-section-6{
+        background: ss-var($colors,primary,'primary4');
+
+    }
+    &.portfolio-section-8{
+        background: ss-var($colors,primary,'primary4');
 
     }
 }

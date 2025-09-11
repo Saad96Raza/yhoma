@@ -27486,7 +27486,10 @@ var Portfolio = /*#__PURE__*/ function() {
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination,
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade
                     ],
+                    autoHeight: false,
+                    autoWidth: false,
                     direction: 'horizontal',
+                    slidesPerView: 1,
                     loop: true,
                     speed: 1000,
                     autoplay: {

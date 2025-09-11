@@ -61,13 +61,9 @@ section {
 .fade-in {
   opacity: 0;
   transform: translateY(rem(100));
-
   transition: 
-    opacity 2s ease, 
-    transform 2s cubic-bezier(0.16, 1, 0.3, 1);
-
-
-
+  opacity 2s ease, 
+  transform 2s cubic-bezier(0.16, 1, 0.3, 1);
   &.is-inview {
     transform: translateY(0);
     opacity: 1;
@@ -75,24 +71,20 @@ section {
 }
 
 
-/* 🔹 Background Image Reveal */
 .reveal-bg {
   @extend %clip-path;
 
   &.is-inview {
     opacity: 1;
     clip-path: circle(150% at 50% 50%);
-    transform: scale(1); // zooms back to normal
+    transform: scale(1); 
   }
 }
 
-
-
-// For h2.splitting
 h2{
   &.splitting{
     .whitespace {
-      width: rem(30); // or rem(60)
+      width: rem(30); 
     }
   }
 }
@@ -100,7 +92,7 @@ p {
 
   &.splitting{
     .whitespace {
-    width: rem(10); // or rem(60)
+    width: rem(10); 
     }
   }
 }

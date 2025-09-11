@@ -17,7 +17,10 @@ export default class Portfolio{
     createGallery(){
         this.swiper = new Swiper('.gallery', {
             modules: [Navigation, Pagination, EffectFade],
+            autoHeight: false,
+            autoWidth: false,
             direction: 'horizontal',
+            slidesPerView:1,
             loop: true,
             speed: 1000,
             autoplay: {

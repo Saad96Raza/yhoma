@@ -7,8 +7,8 @@ section(class="section portfolio-section-6")
             div(class="swiper gallery")
                 div(class="swiper-wrapper")
                     -for(let i = 0; i < 6; ++i){
-                        div(class="swiper-slide px-0 md:px-[10rem]")
-                            img(src="./media/banner/bg-2.png", alt="")
+                        div(class="swiper-slide h-[50rem] flex justify-center items-center md:px-[10rem]") 
+                            img(class="w-full h-auto" src=`./media/banner/${i}.jpg`, alt="")
                     - }
                 div(class="swiper-button-prev")
                     div(class="navigation")

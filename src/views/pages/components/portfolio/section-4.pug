@@ -1,7 +1,15 @@
-section(class="section portfolio-section-4 pt-[10rem]")
-    h2(class="lg-font flex mx-auto text-center w-fit") Mabel's self-catered <br>  apartment
+include ../../mixins/block-reveal-title.pug
+
+section(class="section portfolio-section-4")
+    svg(viewBox="0 0 1440 320" width="100%" class="h-[3rem] md:h-[10rem]" preserveAspectRatio="none")
+        path(d="M0,128L80,154.7C160,181,320,235,480,266.7C640,299,800,309,960,272C1120,235,1280,149,1360,106.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z")
+    +BLOCKREVEAL(
+        'Mabels self-catered apartment',
+        'h2',
+        'lg-font w-fit py-[10rem] mx-auto max-w-[20ch]'
+    )
     div(class="content")
-        svg(viewBox="0 0 1440 320")
+        svg(viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" class="h-[10rem]")
             path( d="M0,32L60,48C120,64,240,96,360,106.7C480,117,600,107,720,90.7C840,75,960,53,1080,58.7C1200,64,1320,96,1380,112L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z")
         div(class="grid grid-cols-1 md:grid-cols-2")
                     div(class="p-[2rem] md:p-[13.125rem]  order-2 md:order-1  flex flex-col gap-[4rem]")
@@ -18,17 +26,16 @@ section(class="section portfolio-section-4 pt-[10rem]")
                                 li(class="body-font")  Reverse-cycle A/C & ceiling fan
                         div(class="flex")
                             +CTA("thing to do")      
-                    div(class="flex order-1 md:order-2")
-                        img(src="./media/banner/bg-2.png", class="w-full h-full" alt="")
-                    div(class="flex order-3")
-                        img(src="./media/banner/bg-1.jpg", class="w-full h-full" alt="")
+                    div(class="flex order-1 md:order-2 overflow-hidden")
+                        img(src="./media/banner/1.jpg", class="w-full h-full" alt=""  data-scroll data-scroll-speed="-3" data-scroll-direction="vertical")
+                    div(class="flex order-3 overflow-hidden")
+                        img(src="./media/banner/1.jpg", class="w-full h-full" alt=""  data-scroll data-scroll-speed="-3" data-scroll-direction="vertical")
                     div(class="flex flex-col gap-[4rem] order-4")            
                         div(class="white p-[2rem] md:p-[13.125rem] flex flex-col gap-[4rem]")
                             div(class="flex flex-col gap-[2rem]") 
                                 h3(class="md-font") Bedrooms
                                 p(class="body-font") 
                                     | Unwind and embrace the welcoming ambiance of this inviting sanctuary.
-
                                 ul(class="list-disc")
                                     li(class="body-font")  LED flat-screen TV          
                                     li(class="body-font")  Additional cushions & throw rugs            
@@ -54,10 +61,10 @@ section(class="section portfolio-section-4 pt-[10rem]")
                                 li(class="body-font")  Reverse-cycle A/C & ceiling fan
                         div(class="flex")
                             +CTA("thing to do")      
-                    div(class="flex order-1 md:order-2")
-                        img(src="./media/banner/bg-2.png", class="w-full h-full" alt="")
-                    div(class="flex order-3")
-                        img(src="./media/banner/bg-1.jpg", class="w-full h-full" alt="")
+                    div(class="flex order-1 md:order-2 overflow-hidden")
+                        img(src="./media/banner/1.jpg", class="w-full h-full" alt="" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical")
+                    div(class="flex order-3 overflow-hidden")
+                        img(src="./media/banner/1.jpg", class="w-full h-full" alt="" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical")
                     div(class="flex flex-col gap-[4rem] order-4")            
                         div(class="white p-[2rem] md:p-[13.125rem] flex flex-col gap-[4rem]")
                             div(class="flex flex-col gap-[2rem]") 
@@ -90,11 +97,11 @@ section(class="section portfolio-section-4 pt-[10rem]")
                                 li(class="body-font")  Reverse-cycle A/C & ceiling fan
                         div(class="flex")
                             +CTA("thing to do")      
-                    div(class="flex order-1 md:order-2")
-                        img(src="./media/banner/bg-2.png", class="w-full h-full" alt="")
-                    div(class="flex order-3")
-                        img(src="./media/banner/bg-1.jpg", class="w-full h-full" alt="")
-                    div(class="flex flex-col gap-[4rem] order-4")            
+                    div(class="flex order-1 md:order-2 overflow-hidden")
+                        img(src="./media/banner/1.jpg", class="w-full h-full" alt="" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical")
+                    div(class="flex order-3 overflow-hidden")
+                        img(src="./media/banner/1.jpg", class="w-full h-full" alt="" data-scroll data-scroll-speed="-3" data-scroll-direction="vertical")
+                    div(class="flex flex-col gap-[4rem] order-4 overflow-hidden")            
                         div(class="white p-[2rem] md:p-[13.125rem] flex flex-col gap-[4rem]")
                             div(class="flex flex-col gap-[2rem]") 
                                 h3(class="md-font") Bedrooms
@@ -111,3 +118,6 @@ section(class="section portfolio-section-4 pt-[10rem]")
                                     li(class="body-font")  Free WiFi
                             div(class="flex")
                                 +CTA("thing to do")
+
+        svg(viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" class="h-[15rem] md:h-[30rem]")
+            path(d="M0,64L80,80C160,96,320,128,480,128C640,128,800,96,960,85.3C1120,75,1280,85,1360,90.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z") 

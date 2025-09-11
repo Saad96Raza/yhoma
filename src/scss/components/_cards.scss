@@ -3,11 +3,8 @@
 
 /* Cards */
 
-.card-2{
-    
-
+.card-2{   
     @extend %card;
-
     z-index: 1;
     @extend %center;
 }
