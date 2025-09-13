@@ -2230,6 +2230,9 @@ header .pure-toggle-label {
   width: 0;
   height: 0;
 }
+header .nav ul li .call-to-action {
+  cursor: pointer;
+}
 header .nav ul li a:hover {
   color: #96634b;
 }
@@ -2246,19 +2249,6 @@ header .nav ul li a:hover {
 }
 
 /* Navigation */ /* Sidebar */
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(3.125rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-dialog.cta-quick-form-modal[open] .modal-box {
-  animation: modalFadeIn 1s ease;
-}
 dialog.cta-quick-form-modal .modal-box {
   border-radius: 0;
   position: relative;
