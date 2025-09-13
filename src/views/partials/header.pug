@@ -29,8 +29,8 @@ header(class="py-[6.125rem]")
                         'contact',
                         'contact.html'
                     )
-                li(class="flex")
-                    a(href="#" class="call-to-action link-font") get in touch 
+                li(class="flex modal-li"  onclick="cta_quick_contact.showModal()")
+                    a(class="call-to-action link-font") get in touch 
             div(class="flex justify-end md:hidden w-full") 
                 div(class="menu-toggle relative z-10")
                         .hamburger
@@ -53,8 +53,24 @@ section(class="pure-container offcanvas" data-effect='pure-effect-fade')
                     li 
                         a(href="about.html" class="md-font") about 
                     li 
-                        a(href="contact.html" class="md-font") contact 
-                    li(class="flex ")
-                        a(href="#" class="call-to-action link-font justify-center mx-auto  w-full flex") get in touch               
-             
+                        a(href="contact.html" class="md-font") contact              
     label(class="pure-overlay" for='pure-toggle-left' data-overlay='left')
+
+
+dialog(id="cta_quick_contact" class="cta-quick-form-modal modal")
+    section(class="contact-modal modal-box max-w-[70%]")
+        div(class="grid grid-cols-1 md:grid-cols-[40%_auto]")
+            div(class="flex my-auto")
+                img(src="./media/banner/4.jpg"  alt="")
+            div(class="flex p-[2rem] w-full")
+                include ../pages/mixins/form.pug
+        form(method='dialog' class="absolute")
+            button(class="btn") 
+                svg( viewbox='0 0 64 64')
+                    g
+                    g
+                    g
+                        line(x1='16' y1='16' x2='48' y2='48')
+                        line(x1='48' y1='16' x2='16' y2='48')
+
+    

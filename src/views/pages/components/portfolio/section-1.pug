@@ -1,17 +1,37 @@
-include ../../mixins/card-1.pug
+include ../../mixins/block-reveal-title.pug
+include ../../mixins/block-reveal-text.pug
+include ../../mixins/call-to-action.pug
 
-section(class="section portfolio-section-1 relative mask-container")
-    div(class="container relative")
-        div(class="grid grid-cols-1 md:grid-cols-[40%_auto] relative  gap-[1rem] md:gap-[5rem]")
-            div(class="flex justify-center items-center md:col-start-1 md:row-start-1")
-                img(src="./media/banner/10.jpg" class="p-0 md:p-[5rem]" alt="")
-            div(class="gap-[2rem] py-0 md:py-[5rem] flex justify-center items-center md:col-start-1 md:row-start-1 md:col-span-2 z-10")
-                +OCARD(
-                    "Accommodation",       
-                    "Modern self contained accommodation in the Hills",
-                    "h1"
-                )
-            div(class="flex justify-end md:col-start-2 md:row-start-1")
-                img(src="./media/banner/6.jpg"  alt="")
-    svg(viewbox='0 0 1440 320' class="shape-divider h-[10rem] md:h-[30rem]" width='100%'  preserveAspectRatio="none")
-        path(d='M0,256L48,234.7C96,213,192,171,288,160C384,149,480,171,576,170.7C672,171,768,149,864,122.7C960,96,1056,64,1152,42.7C1248,21,1344,11,1392,5.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z')
+
+
+section(class="section portfolio-section-1")
+    div(class="grid grid-cols-1 md:grid-cols-[auto_30%]")
+        div(class="flex container")
+            div(class="grid")
+                div(class="flex")
+                    img(src="./media/banner/10.jpg" class="")
+                div(class="flex flex-col gap-[2rem]")
+                    +BLOCKREVEAL(
+                        'YHÔMA, Plus qu’une location',
+                        'h1',
+                        'lg-font text-left'
+                    )
+                    +BLOCKREVEAL(
+                        'Un modèle différent, simple',
+                        'h3',
+                        'md-font text-left'
+                    )
+                    +BRTEXT(
+                        'Nous devenons votre locataire unique et gérons votre bien avec le plus grand soin. Un revenu garanti',
+                        'body-font'
+                    )
+                    div(class="flex")
+                        +CTA("EN SAVOIR PLUS") 
+        div(class="flex")
+            img(src="./media/banner/6.jpg" class="")
+
+    //- svg(viewbox='0 0 1440 320' class="shape-divider h-[10rem] md:h-[30rem]" width='100%' preserveAspectRatio="none")
+    //-     path(d='M0,256L48,234.7C96,213,192,171,288,160C384,149,480,171,576,170.7C672,171,768,149,864,122.7C960,96,1056,64,1152,42.7C1248,21,1344,11,1392,5.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z')
+    
+
+

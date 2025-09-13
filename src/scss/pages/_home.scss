@@ -9,10 +9,18 @@
 
 section{
     &.home-section-1{
-
         .container{
-            z-index: 2;
+            @apply p-[2rem] md:p-0;
+            .grid{
+                > div {
+                     &:nth-child(2){
+                        @apply gap-[3rem] p-0 md:pl-[14rem] md:pr-[2rem];
+                    }
+                }
+        
+            }
         }
+       
         .shape-divider{
             position: relative;
             z-index: 3;

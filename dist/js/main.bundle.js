@@ -27319,6 +27319,81 @@ return Splitting;
 
 
 }),
+"./src/apps/about/index.js": 
+/*!*********************************!*\
+  !*** ./src/apps/about/index.js ***!
+  \*********************************/
+(function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (About)
+});
+/* ESM import */var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* ESM import */var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* ESM import */var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+function _class_call_check(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _create_class(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+
+ // Import Autoplay module
+
+var About = /*#__PURE__*/ function() {
+    "use strict";
+    function About() {
+        _class_call_check(this, About);
+        this.createReRender();
+    }
+    _create_class(About, [
+        {
+            key: "createReRender",
+            value: function createReRender() {
+                this.createAboutIntro();
+            }
+        },
+        {
+            key: "createAboutIntro",
+            value: function createAboutIntro() {
+                this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.about-section-1-slider', {
+                    modules: [
+                        swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay
+                    ],
+                    direction: 'horizontal',
+                    loop: true,
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    speed: 3000,
+                    allowTouchMove: false,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false
+                    }
+                });
+            }
+        }
+    ]);
+    return About;
+}();
+
+
+
+}),
 "./src/apps/home/index.js": 
 /*!********************************!*\
   !*** ./src/apps/home/index.js ***!
@@ -27383,6 +27458,7 @@ var Home = /*#__PURE__*/ function() {
                         swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade
                     ],
                     direction: 'horizontal',
+                    slidesPerView: 1,
                     loop: true,
                     speed: 1000,
                     autoplay: {
@@ -27390,7 +27466,6 @@ var Home = /*#__PURE__*/ function() {
                     },
                     autoplayDisableOnInteraction: false,
                     effect: "fade",
-                    slidersPerView: 1,
                     fadeEffect: {
                         crossFade: true
                     },
@@ -38180,17 +38255,18 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* ESM import */var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/apps/home/index.js");
 /* ESM import */var _portfolio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./portfolio */ "./src/apps/portfolio/index.js");
-/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
-/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_2__);
-/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
-/* ESM import */var splitting__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! splitting */ "./node_modules/splitting/dist/splitting.js");
-/* ESM import */var splitting__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(splitting__WEBPACK_IMPORTED_MODULE_4__);
-/* ESM import */var splitting_dist_splitting_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! splitting/dist/splitting.css */ "./node_modules/splitting/dist/splitting.css");
-/* ESM import */var splitting_dist_splitting_cells_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! splitting/dist/splitting-cells.css */ "./node_modules/splitting/dist/splitting-cells.css");
-/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
-/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_8__);
+/* ESM import */var _about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about */ "./src/apps/about/index.js");
+/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
+/* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_3__);
+/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
+/* ESM import */var splitting__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! splitting */ "./node_modules/splitting/dist/splitting.js");
+/* ESM import */var splitting__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(splitting__WEBPACK_IMPORTED_MODULE_5__);
+/* ESM import */var splitting_dist_splitting_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! splitting/dist/splitting.css */ "./node_modules/splitting/dist/splitting.css");
+/* ESM import */var splitting_dist_splitting_cells_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! splitting/dist/splitting-cells.css */ "./node_modules/splitting/dist/splitting-cells.css");
+/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
+/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* ESM import */var lodash__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_9__);
 function _class_call_check(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
         throw new TypeError("Cannot call a class as a function");
@@ -38220,13 +38296,15 @@ function _create_class(Constructor, protoProps, staticProps) {
 
 
 
+
 var App = /*#__PURE__*/ function() {
     "use strict";
     function App() {
         _class_call_check(this, App);
         this.pages = {
             home: new _home__WEBPACK_IMPORTED_MODULE_0__["default"](),
-            portfolio: new _portfolio__WEBPACK_IMPORTED_MODULE_1__["default"]()
+            portfolio: new _portfolio__WEBPACK_IMPORTED_MODULE_1__["default"](),
+            about: new _about__WEBPACK_IMPORTED_MODULE_2__["default"]()
         };
         this.createLocomotiveScroll();
         this.createLettersComponents();
@@ -38241,7 +38319,7 @@ var App = /*#__PURE__*/ function() {
             key: "createAjaxNavigation",
             value: function createAjaxNavigation() {
                 var easeIn = function(container, done) {
-                    return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].to(container, {
+                    return gsap__WEBPACK_IMPORTED_MODULE_10__["default"].to(container, {
                         autoAlpha: 0,
                         duration: 1,
                         ease: 'none',
@@ -38251,13 +38329,13 @@ var App = /*#__PURE__*/ function() {
                     });
                 };
                 var easeOut = function(container) {
-                    return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].from(container, {
+                    return gsap__WEBPACK_IMPORTED_MODULE_10__["default"].from(container, {
                         autoAlpha: 0,
                         duration: 1,
                         ease: 'none'
                     });
                 };
-                _barba_core__WEBPACK_IMPORTED_MODULE_2___default().init({
+                _barba_core__WEBPACK_IMPORTED_MODULE_3___default().init({
                     preventRunning: true,
                     transitions: [
                         {
@@ -38282,16 +38360,16 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createLettersComponents",
             value: function createLettersComponents() {
-                this.splitting = splitting__WEBPACK_IMPORTED_MODULE_4___default()();
+                this.splitting = splitting__WEBPACK_IMPORTED_MODULE_5___default()();
             }
         },
         {
             key: "createPreloader",
             value: function createPreloader() {
                 var that = this;
-                that.title = (0,lodash__WEBPACK_IMPORTED_MODULE_8__.toArray)(document.querySelectorAll('.preloader-title .char'));
+                that.title = (0,lodash__WEBPACK_IMPORTED_MODULE_9__.toArray)(document.querySelectorAll('.preloader-title .char'));
                 this.height = document.querySelector('.preloader');
-                this.preloader = gsap__WEBPACK_IMPORTED_MODULE_9__["default"].timeline({
+                this.preloader = gsap__WEBPACK_IMPORTED_MODULE_10__["default"].timeline({
                     repeat: -1,
                     paused: true
                 });
@@ -38336,7 +38414,7 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createLocomotiveScroll",
             value: function createLocomotiveScroll() {
-                this.locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__["default"]({
+                this.locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_4__["default"]({
                     el: document.querySelector('.smooth-scroll'),
                     smooth: true,
                     reloadOnContextChange: true,
@@ -38351,12 +38429,13 @@ var App = /*#__PURE__*/ function() {
             key: "createReRender",
             value: function createReRender() {
                 var _this = this;
-                _barba_core__WEBPACK_IMPORTED_MODULE_2___default().hooks.before(function() {
+                _barba_core__WEBPACK_IMPORTED_MODULE_3___default().hooks.before(function() {
                     _this.locomotiveScroll.destroy();
                 });
-                _barba_core__WEBPACK_IMPORTED_MODULE_2___default().hooks.after(function() {
+                _barba_core__WEBPACK_IMPORTED_MODULE_3___default().hooks.after(function() {
                     _this.pages.home.createReRender();
                     _this.pages.portfolio.createReRender();
+                    _this.pages.about.createReRender();
                     _this.locomotiveScroll.init();
                     _this.createLettersComponents();
                 });

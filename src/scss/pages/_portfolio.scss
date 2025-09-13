@@ -7,7 +7,15 @@
 
 section{
     &.portfolio-section-1{
-        background: ss-var($colors,primary,'primary2');
+        background: ss-var($colors,primary,'primary4');
+        .grid{
+            @apply gap-[4rem];
+        }
+        .container {
+             > .grid{
+                @apply grid-cols-1 md:grid-cols-[40%_auto] gap-[4rem] justify-center items-center;
+            }
+        }
         .shape-divider{
             path{               
                 @extend %wave-bg;
@@ -29,7 +37,7 @@ section{
         }
         svg{
             path{               
-                @extend %wave-bg;
+                fill: ss-var($colors,primary,'primary4');
             }
         }
     }

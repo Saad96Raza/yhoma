@@ -1,0 +1,19 @@
+include ../mixins/input.pug
+include ../mixins/call-to-action.pug
+
+form(class="grid grid-cols-1 md:grid-cols-2 gap-[2rem] w-full" action="")
+    +input('first name','first','first-name','pt-[4rem]')
+
+    +input('last name','last','last-name' , 'pt-[4rem]')
+
+    +input('email','email','user-email' , 'pt-[4rem]')
+
+    +input('phone','phone','user-phone' , 'pt-[4rem]')
+
+    +input('subject','subject','user-subject' ,'md:col-span-2 pt-[4rem]')
+
+    +input('message','message','user-message' ,'md:col-span-2 pt-[4rem]')
+
+    div(class="pt-[4rem] md:col-span-2") 
+        +CTA('Send Your Query')
+    

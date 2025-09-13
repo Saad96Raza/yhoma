@@ -7,9 +7,22 @@
 
 
 section{
+    &.about-section-1{
+        .about-section-1-slider{
+            .swiper-wrapper{
+                  transition-timing-function: linear;
+
+                .swiper-slide{
+                    img{
+                        border-top-left-radius: rem(260);
+                        border-top-right-radius: rem(260);
+                    }
+                }
+            }
+        }
+    }
     &.about-section-3{
         svg{
-            width: 120rem;
             position: absolute;
             right: 0;
             bottom: 0;
@@ -17,12 +30,8 @@ section{
                 fill: ss-var($colors,primary,'primary2');
             }
         }
-            .left{
-                background: ss-var($colors,primary,'primary2');
-            }
+            
     }
-    &.about-section-4{
-        background: ss-var($colors,primary,'primary2');
-    }
+   
 }
 

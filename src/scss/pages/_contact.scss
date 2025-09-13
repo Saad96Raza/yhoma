@@ -17,7 +17,7 @@ section{
             content: "";
             position: absolute;
             inset: 0;
-            @extend %gadinet-bg;
+            background: linear-gradient(to bottom, ss-var($colors,primary,'primary2') 20%, rgba(ss-var($colors,primary,'primary2'), 0.8) 47%, ss-var($colors,primary,'primary2')90%);
             z-index: -1;      
 
 
@@ -28,7 +28,6 @@ section{
     }
     &.contact-section-3{
         .grid{
-           
             .left{
                 .body-font{
                     color: ss-var($colors,neutral,'white');
@@ -39,6 +38,4 @@ section{
             }
         }
     }
-
-
 }

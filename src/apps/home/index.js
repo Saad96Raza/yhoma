@@ -18,15 +18,14 @@ export default class Home {
         this.swiper = new Swiper('.testimonial', {
             modules: [Navigation, Pagination, EffectFade],
             direction: 'horizontal',
+            slidesPerView: 1,
             loop: true,
             speed: 1000,
             autoplay: {
                 delay: 2500,
             },
             autoplayDisableOnInteraction: false,
-
             effect: "fade",
-            slidersPerView: 1,
 
             fadeEffect: { crossFade: true },
             pagination: { el: '.testimonial .swiper-pagination', clickable: true },

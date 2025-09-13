@@ -73,13 +73,10 @@
 }
 
 .md-font{
-    @apply 
-    text-[3rem]
-    font-medium
-    font-thin
-    leading-none
-    capitalize;
-    font-family: $font-spark;
+   @extend %font-md;
+   span{
+     @extend %font-md;
+   }
 }
 
 .sm-font {

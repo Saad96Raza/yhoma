@@ -40,9 +40,11 @@
 %font-body{
     @apply text-[1.4rem] md:text-[2rem]
     capitalize
+    leading-[1.2]
     tracking-normal;
     font-family: $font-raleway;
 }
+
 
 %font-link{
   @apply  
@@ -51,6 +53,18 @@
   font-family: $font-cinzel; 
   font-size: $nav-link;   
 }
+
+%font-md{
+ @apply 
+    text-[3rem]
+    font-medium
+    font-thin
+    leading-none
+    capitalize;
+    font-family: $font-spark;
+
+}
+
 
 
 %overlay-bg{
@@ -67,8 +81,8 @@
 %card{
     background: ss-var($colors,primary,'primary4');
     flex-direction: column;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    border-top-left-radius: rem(400);
+    border-top-right-radius: rem(400);
     @apply py-[5.5rem] md:py-[7.5rem] px-[1rem] md:px-[4.75rem];
     box-shadow: 0 rem(8) rem(24) rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(rem(5));

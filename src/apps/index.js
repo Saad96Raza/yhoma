@@ -1,5 +1,6 @@
 import Home from './home';
 import Portfolio from './portfolio';
+import About from './about';
 import barba from '@barba/core';
 import GSAP from 'gsap';
 import LocomotiveScroll from 'locomotive-scroll';
@@ -15,7 +16,8 @@ class App{
     constructor(){
         this.pages = {
             home : new Home(),
-            portfolio : new Portfolio()
+            portfolio : new Portfolio(),
+            about : new About()
         }
         this.createLocomotiveScroll()
         this.createLettersComponents()
@@ -135,6 +137,7 @@ class App{
         barba.hooks.after(() => {
             this.pages.home.createReRender() 
             this.pages.portfolio.createReRender() 
+            this.pages.about.createReRender() 
             this.locomotiveScroll.init()
             this.createLettersComponents()
         })

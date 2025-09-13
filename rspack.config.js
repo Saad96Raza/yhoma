@@ -4,6 +4,8 @@ const path =  require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rspack  = require('@rspack/core')
 const { ProvidePlugin } = require('@rspack/core');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const imageminWebp = require("imagemin-webp");
 
 const pugPages = glob.sync('src/views/pages/*.pug')
 
@@ -31,7 +33,25 @@ module.exports = {
         hot:false,
         port: 2000,
     },
-    devtool: false, 
+    devtool: false,
+    optimization: {
+        minimizer: [
+            new ImageMinimizerPlugin({
+                minimizer: {
+                implementation: ImageMinimizerPlugin.squooshMinify,
+                options: {
+                    encodeOptions: {
+                    mozjpeg: { quality: 75 }, 
+                    oxipng: {},              
+                    },
+                    resize: {
+                    width: 800,  
+                    },
+                },
+                },
+            }),
+        ],
+  },
     module:{
         rules:[
             {

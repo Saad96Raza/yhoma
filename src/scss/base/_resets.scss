@@ -86,7 +86,7 @@ section,
 header,
 footer{
     .container{
-        @apply px-[2rem] md:px-[13.125rem];
+        @apply px-[2rem] md:px-[8rem];
     }
     svg{
         display: inline-block;
@@ -94,11 +94,15 @@ footer{
     }
     background: ss-var($colors,primary,'primary2');
     color: ss-var($colors,primary,'primary1');
-
+    .shape-img{
+        @apply  p-0  md:p-[12rem];
+        img{
+            border-top-left-radius: rem(380);
+            border-top-right-radius: rem(380);
+            @apply  m-0  md:ml-[80%];
+        }
+    }
 }
-
-
-
 
 p,
 span{
@@ -123,3 +127,4 @@ a{
      }
    }
 }
+
